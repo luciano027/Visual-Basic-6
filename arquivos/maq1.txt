@@ -1,0 +1,33 @@
+x0
+
+
+BOTELHO MATERIAL DE CONSTRUCAO                                        Pagina:  1
+AV MURIAE, 376 - NOVA CARAPINA - TEL. 3341-2005 / 99511-3123
+Data....: 15/10/20          Extrato do Orcamento              Hora....: 06:21:55
+Cliente.: 
+
+Venda...: 188932
+
+Codigo Descricao                                Quant.     Preco      Total  
+------ ---------------------------------------- ---------- ---------- ----------
+001431 ARRUELA LISA 1/4                              24,00       0,13       3,12
+000967 BARRA ROSQUEADA 1/4 1MT                        1,00       5,90       5,90
+000917 CIMENTO HOLCIN 50KG AP                         1,00      21,00      21,00
+001778 GRAFILITO 17 K P/ LIGA DE MASSA                1,00       5,30       5,30
+001761 LAJOTA 09X19X39 LAJOTAO                      200,00       0,98     196,00
+000859 PECAS MADEIRA NATIVA 9X4 MT                   32,50      12,80     416,00
+000592 PORCA SEXTAV 1/4                              12,00       0,15       1,80
+000853 RIPAO MADEIRA NATIVA 6X2,5 MT                 24,00       5,90     141,60
+000745 SERRA P/ MADEIRA 24 DENTES                     1,00      15,50      15,50
+--------------------------------------------------------------------------------
+                                                    Total a Pagar..R$     806,22
+
+
+
+
+
+
+
+
+
+

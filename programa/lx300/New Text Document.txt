@@ -1,0 +1,18 @@
+Private Sub cmdPrint_Click()
+'This is the sample how to print in Dos Mode and How to print it Bold!
+'http://www.geocities.com/mdgnn/xcontrols.htm
+
+    Open "Lpt1" For Output As #1
+    
+       Print #1, Chr(27) & "@" 'Initialize printer
+       Print #1, Chr(27) & "A" & Chr(11)
+       Print #1, Chr(27) & "E" 'Set Font Bold
+       Print #1, "Printer is Bold"
+       Print #1, "Printer is Bold"
+       Print #1, Chr(27) & "F" ' Set Font Normal
+       
+       Print #1, "Printer is Normal"
+       Print #1, "Printer is Normal"
+
+   Close #1
+End Sub

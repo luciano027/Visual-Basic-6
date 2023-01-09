@@ -1,0 +1,35 @@
+
+  BOTELHO MATERIAL DE CONSTRUCAO               
+  AV MURIAE, 376 - NOVA CARAPINA                   
+  Telefone:  3341-2005            FAX:  3341-2005                     Pag. 001
+  Extrato Cliente 
+  Data..: 18/05/2013
+  Vendedor : JEFERSON                                     
+
+  Codigo  Especificacao                            Quant    P.Venda Total      
+  ~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~ ~~~~~~~ ~~~~~~~~~~ 
+  000827  CIMENTO HOLCIN 50KL AV                       2,00  20,500     41,00
+  001819  CAL HIDRATADO P/ REBOCO PARAISO 20 KG        1,00   6,800      6,80
+  ----------------------------------------------------------------------------
+   Total de Compas..:     47,80 Desconto..:           Total a Pagar..:    47,80
+  ----------------------------------------------------------------------------
+
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Sistema de Administracao Estoque - Versao 1.0  18/05/2013                                                         07:51
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

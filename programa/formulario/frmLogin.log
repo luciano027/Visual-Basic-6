@@ -1,0 +1,20 @@
+Line 19: Class Fioreto.VistaButton of control cmdSair was not a loaded control class.
+Line 47: Class Fioreto.VistaButton of control cmdOK was not a loaded control class.
+Line 25: The property name _ExtentX in cmdSair is invalid.
+Line 26: The property name _ExtentY in cmdSair is invalid.
+Line 27: The property name Caption in cmdSair is invalid.
+Line 39: The property name Pictures in cmdSair is invalid.
+Line 40: The property name UseMaskColor in cmdSair is invalid.
+Line 41: The property name MaskColor in cmdSair is invalid.
+Line 43: The property name NoBackground in cmdSair is invalid.
+Line 45: The property name PictureOffset in cmdSair is invalid.
+Line 19: Property Picture in cmdSair could not be set.
+Line 53: The property name _ExtentX in cmdOK is invalid.
+Line 54: The property name _ExtentY in cmdOK is invalid.
+Line 55: The property name Caption in cmdOK is invalid.
+Line 67: The property name Pictures in cmdOK is invalid.
+Line 68: The property name UseMaskColor in cmdOK is invalid.
+Line 69: The property name MaskColor in cmdOK is invalid.
+Line 71: The property name NoBackground in cmdOK is invalid.
+Line 73: The property name PictureOffset in cmdOK is invalid.
+Line 47: Property Picture in cmdOK could not be set.

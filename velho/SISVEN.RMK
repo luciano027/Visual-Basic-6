@@ -1,0 +1,80 @@
+  .PRG.OBJ :
+ clipper $* -q-m-b
+
+sisven.obj    : sisven.prg
+arqproc.obj   : arqproc.prg
+relogi.obj    : relogi.prg
+calend.obj    : calend.prg
+menumov.obj   : menumov.prg
+cadent.obj    : cadent.prg
+relent.obj    : relent.prg
+cadsai.obj    : cadsai.prg
+relsai.obj    : relsai.prg
+cadven.obj    : cadven.prg
+relven.obj    : relven.prg
+menutab.obj   : menutab.prg
+menuutil.obj  : menuutil.prg
+vista.obj     : vista.prg
+cadest.obj    : cadest.prg
+rest.obj      : rest.prg
+backp.obj     : backp.prg
+vistaexc.obj  : vistaexc.prg
+reltic.obj    : reltic.prg
+relinv.obj    : relinv.prg
+relprod.obj   : relprod.prg
+cadcai1.obj   : cadcai1.prg
+cadcai2.obj   : cadcai2.prg
+cadfor.obj    : cadfor.prg
+reltab.obj    : reltab.prg
+reltab1.obj   : reltab1.prg
+reltic1.obj   : reltic1.prg
+reltic2.obj   : reltic2.prg
+reltic3.obj   : reltic3.prg
+reltic4.obj   : reltic4.prg
+reltic5.obj   : reltic5.prg
+relprc.obj    : relprc.prg
+relextv.obj   : relextv.prg
+relextve.obj  : relextve.prg
+cadsai1.obj   : cadsai1.prg
+relprod2.obj  : relprod2.prg
+relcli.obj    : relcli.prg
+relmin.obj    : relmin.prg
+relfor.obj    : relfor.prg
+menuvend.obj  : menuvend.prg
+ativascr.obj  : ativascr.prg
+cadimp.obj    : cadimp.prg
+relped.obj    : relped.prg
+cadpag.obj    : cadpag.prg
+relcont1.obj  : relcont1.prg
+relcont2.obj  : relcont2.prg
+relsai1.obj   : relsai1.prg
+relsai2.obj   : relsai2.prg
+relexc4.obj   : relexc4.prg
+cadcli.obj    : cadcli.prg
+relfcai.obj   : relfcai.prg
+cadrec.obj    : cadrec.prg
+relcont3.obj  : relcont3.prg
+relcont4.obj  : relcont4.prg
+relextvc.obj  : relextvc.prg
+cadprazo.obj  : cadprazo.prg
+prazoexc.obj  : prazoexc.prg
+prazocom.obj  : prazocom.prg
+relext.obj    : relext.prg
+relclid.obj   : relclid.prg
+sisven.exe    : sisven.obj   arqproc.obj  relogi.obj   calend.obj\
+                menumov.obj  menutab.obj  vista.obj    menuutil.obj\
+                cadent.obj   cadsai.obj   relent.obj   relsai.obj\
+                cadven.obj   cadest.obj   cadfor.obj   cadsai1.obj\
+                rest.obj     backp.obj    vistaexc.obj relprod2.obj\
+                reltic.obj   reltab.obj   relcont1.obj cadcli.obj\
+                relinv.obj   relprod.obj  cadcai1.obj  cadcai2.obj\
+                reltab1.obj  reltic1.obj  reltic2.obj  relprc.obj\
+                relextv.obj  reltic3.obj  reltic4.obj  relcli.obj\
+                reltic5.obj  relextve.obj relmin.obj   relfor.obj\
+                menuvend.obj ativascr.obj cadimp.obj   relped.obj\
+                cadpag.obj   relcont2.obj relsai1.obj  relsai2.obj\
+                __wait.obj   pentium2.obj relexc4.obj  relfcai.obj\
+                cadrec.obj   relcont3.obj relcont4.obj relextvc.obj\
+                cadprazo.obj prazoexc.obj prazocom.obj relext.obj\
+                relclid.obj
+                rtlink @sisven lib grump,ct,scrnsave

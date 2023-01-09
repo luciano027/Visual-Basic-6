@@ -1,0 +1,4 @@
+Quarto passo: Para finalizar a operação é necessário acessar o Menu Iniciar do Windows – Executar, digitar regedit e clique em ‘OK’. Abra a pasta HKEY_LOCAL_MACHINE/SOFTWARE/DARUMA/ECF/ e altere a chave VELOCIDADE para 115200. OK.
+
+OBS: Não é necessário emular portas ou utilizar conversores.
+

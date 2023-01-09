@@ -1,0 +1,322 @@
+#line 1 "Inkey.ch"
+#line 12 "ARRAY.PRG"
+
+static nRow
+
+
+
+
+
+
+
+
+
+
+
+FUNCTION ABrowse( aArray, nT, nL, nB, nR )
+
+   LOCAL n, xRet, nOldNRow, nOldCursor  
+   LOCAL o                              
+   LOCAL nKey := 0                      
+
+
+
+   nOldCursor := SetCursor( 0 )
+
+
+   nOldNRow := nRow
+   nRow := 1
+
+
+
+   nT := IF( nT == NIL, 0, nT )
+   nL := IF( nL == NIL, 0, nL )
+   nB := IF( nB == NIL, MAXROW(), nB )
+   nR := IF( nR == NIL, MAXCOL(), nR )
+
+
+
+   o := TBrowseNew( nT, nL, nB, nR )
+
+
+
+
+
+
+
+   o:SkipBlock := { |nSkip|                                              nSkip := ASkipTest(aArray, nRow, nSkip),    nRow += nSkip,                              nSkip                                       }
+
+
+   o:GoTopBlock := { || nRow := 1 }
+
+
+   o:GoBottomBlock := { || nRow := LEN(aArray) }
+
+
+
+   FOR n = 1 TO LEN( aArray[1] )
+      o:AddColumn( TBColumnNew("", ABrowseBlock(aArray, n)) )
+   NEXT
+
+
+
+   while nKey <> 27 .AND. nKey <> 13
+
+
+      nKey := 0
+      while ! o:Stabilize()
+         nKey := INKEY()
+         IF nKey <> 0
+            EXIT
+         ENDIF
+      ENDDO
+
+      IF nKey == 0
+         nKey := INKEY(0)
+      ENDIF
+
+
+      IF o:Stable
+
+         DO CASE
+         CASE ( nKey == 24 )
+            o:Down()
+
+         CASE ( nKey == 5 )
+            o:Up()
+
+         CASE ( nKey == 4 )
+            o:Right()
+
+         CASE ( nKey == 19 )
+            o:Left()
+
+         CASE ( nKey == 3 )
+            o:Right()
+            o:Down()
+
+         CASE ( nKey == 18 )
+            o:Right()
+            o:Up()
+
+         CASE ( nKey == 1 )
+            o:Left()
+            o:Up()
+
+         CASE ( nKey == 6 )
+            o:Left()
+            o:Down()
+
+         ENDCASE
+
+      ENDIF
+
+   ENDDO
+
+
+
+   xRet := IF( nKey == 13, aArray[nRow, o:ColPos], NIL )
+
+
+   SetCursor( nOldCursor )
+
+
+   nRow := nOldNRow
+
+
+   RETURN (xRet)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+STATIC FUNCTION ABrowseBlock(a, x)
+
+   RETURN ( {|p| IF(PCOUNT() == 0, a[nRow, x], a[nRow, x] := p)} )
+
+
+
+
+
+
+
+
+
+
+
+STATIC FUNCTION ASkipTest(a, nCurrent, nSkip)
+
+   IF ( nCurrent + nSkip < 1 )
+
+      RETURN ( -nCurrent + 1 )
+
+   ELSEIF ( nCurrent + nSkip > LEN(a) )
+
+      RETURN ( LEN(a) - nCurrent )
+
+   END
+
+
+   RETURN (nSkip)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FUNCTION ABlock( cName, nSubx )
+
+LOCAL cAXpr
+
+   cAXpr := cName + "[" + LTRIM(STR(nSubx)) + "]"
+
+   RETURN &( "{ |p| IF(PCOUNT()==0, " + cAXpr + "," + cAXpr + ":=p) }" )
+
+
+
+
+
+
+
+FUNCTION AMax( aArray )
+
+   LOCAL nLen, nPos, expLast, nElement
+
+
+   DO CASE
+
+
+   CASE VALTYPE( aArray ) <> "A"
+      RETURN NIL
+
+
+   CASE EMPTY( aArray )
+      RETURN 0
+
+   OTHERWISE
+      nLen := LEN( aArray )
+      nPos := 1
+      expLast := aArray[1]
+      FOR nElement := 2 TO nLen
+         IF aArray[nElement] > expLast
+            nPos := nElement
+            expLast := aArray[nElement]
+         ENDIF
+      NEXT
+
+   ENDCASE
+
+   RETURN nPos
+
+
+
+
+
+
+
+FUNCTION AMin( aArray )
+
+   LOCAL nLen, nPos, expLast, nElement
+
+
+   DO CASE
+
+
+   CASE VALTYPE( aArray ) <> "A"
+      RETURN NIL
+
+
+   CASE EMPTY( aArray )
+      RETURN 0
+
+   OTHERWISE
+      nLen := LEN( aArray )
+      nPos := 1
+      expLast := aArray[1]
+      FOR nElement := 2 TO nLen
+         IF aArray[nElement] < expLast
+            nPos := nElement
+            expLast := aArray[nElement]
+         ENDIF
+      NEXT
+
+   ENDCASE
+
+   RETURN nPos
+
+
+
+
+
+
+
+
+FUNCTION AComp( aArray, bComp, nStart, nStop )
+   LOCAL value := aArray[1]
+
+
+
+
+
+
+   AEVAL(                                                                aArray,                                                        {|x| value := IF( EVAL(bComp, x, value), x, value )},          nStart,                                                        nStop                                                          )
+
+   RETURN( value )
+
+
+
+
+
+
+
+
+
+FUNCTION Dimensions( aArray )
+   LOCAL aDims := {}
+
+   while ( VALTYPE(aArray) == "A" )
+      AADD( aDims, LEN(aArray) )
+      aArray := aArray[1]
+   ENDDO
+
+   RETURN (aDims)

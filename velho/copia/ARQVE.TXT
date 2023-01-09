@@ -1,0 +1,34 @@
+
+  BOTELHO MATERIAL DE CONSTRUCAO               
+  AV MURIAE, 376 - NOVA CARAPINA                   
+  Telefone:  3341-2005            FAX:  3341-2005                     Pag. 001
+  Extrato Cliente 
+  Data..: 28/06/2008
+
+  Codigo  Especificacao                            Quant    P.Venda Total      
+  ~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~ ~~~~~~~ ~~~~~~~~~~ 
+  001441  COLUNA POP 5/16 7x20 3 METROS                1,00  33,000     33,00
+  000827  CIMENTO PARAISO 50KL                         1,00  15,800     15,80
+  001259  CAIXA PADRAO MONOFAZICA ESCELSA              1,00  29,000     29,00
+  000588  PARAFUSO 5/8 6" P/ OLHAL                     1,00   5,500      5,50
+  000587  OLHAL SEM PARAFUSO                           1,00   6,700      6,70
+  000893  FIO 16mm RIGIDO AZUL METRO                   2,00   6,500     13,00
+  000357  FIO 16mm RIGIDO PRETO METRO                  2,00   6,500     13,00
+  ----------------------------------------------------------------------------
+   Total de Compas..:    116,00 Desconto..:           Total a Pagar..:   116,00
+  ----------------------------------------------------------------------------
+
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Sistema de Administracao Estoque - Versao 1.0  28/06/2008                                                         10:37
+
+
+
+
+
+
+
+
+
+
+
+

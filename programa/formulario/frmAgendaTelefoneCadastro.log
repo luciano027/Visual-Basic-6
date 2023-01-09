@@ -1,0 +1,10 @@
+Line 72: Class RichTextLib.RichTextBox of control txtObs was not a loaded control class.
+Line 207: Class MSComctlLib.StatusBar of control status was not a loaded control class.
+Line 78: The property name _ExtentX in txtObs is invalid.
+Line 79: The property name _ExtentY in txtObs is invalid.
+Line 80: The property name _Version in txtObs is invalid.
+Line 82: The property name TextRTF in txtObs is invalid.
+Line 214: The property name _ExtentX in status is invalid.
+Line 215: The property name _ExtentY in status is invalid.
+Line 216: The property name _Version in status is invalid.
+Line 223: The property name Panels in status is invalid.

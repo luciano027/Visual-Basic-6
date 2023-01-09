@@ -1,0 +1,17 @@
+
+Auther: Fayyaz Butt
+For Comments Plz email to : fayyaz_a@hotmail.com
+ANY HEADING GOES HERE..                                 maio 7, 2015
+
+===========================================================================
+ Code    Description 
+===========================================================================
+1001 | ABC TRADERS
+1002 | XYZ BROTHERS
+1003 | FALCON CEMENT
+1004 | NET CON EXPORTERS
+---------------------------------------------------------------------------
+*** End of Report ***
+
+---------------------------------------------------------------------------
+ Any text you want to print at footer          Page :   1

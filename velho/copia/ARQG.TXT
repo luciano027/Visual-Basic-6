@@ -1,0 +1,35 @@
+
+  BOTELHO MATERIAL DE CONSTRUCAO               
+  AV MURIAE, 376 - NOVA CARAPINA                   
+  Telefone:  3341-2005            FAX:  3341-2005                     Pag. 001
+  Extrato Cliente 
+  Data..: 18/05/2013
+  Vendedor : JEFERSON                                     
+
+  Codigo  Especificacao                            Quant    P.Venda Total      
+  ~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~ ~~~~~~~ ~~~~~~~~~~ 
+  001761  LAJOTA 09X19X38 10 FURO                    500,00   0,960    480,00
+  000827  CIMENTO HOLCIN 50KL AV                       4,00  20,500     82,00
+  000844  TAIPA DE PINHO 30 CM.3 METR UNID             9,00  12,900    116,10
+  ----------------------------------------------------------------------------
+   Total de Compas..:    678,10 Desconto..:           Total a Pagar..:   678,10
+  ----------------------------------------------------------------------------
+
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Sistema de Administracao Estoque - Versao 1.0  18/05/2013                                                         07:43
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

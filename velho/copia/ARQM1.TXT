@@ -1,0 +1,66 @@
+
+  BOTELHO MATERIAL DE CONSTRUCAO               
+  AV MURIAE, 376 - NOVA CARAPINA                   
+  Telefone:  3341-2005            FAX:  3341-2005                     Pag. 001
+  Extrato de Conta Cliente  -  a Prazo
+  Cliente...: 00131  JOSE THEMOTHEO                               
+  Endereco..: R.MANHA€U N§767                              
+  Bairro....: N.CARAPINA II   CEP.:           
+  Cidade....: SERRA                          UF..: ES
+  Telefone..:                Celular...:               
+  Data Debito :18/07/2014
+
+  Codigo  Especificacao                   Data       Quantidade   Valor       
+  ~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~~  ~~~~~~~~~~~~
+  000215  LINHA DE PESCA 0,90x100m        18/07/2014       1,00         8.50
+  000832  AREIA MEDIA BRANCA METRO        18/07/2014       1,00        79.00
+  000836  BARRO P/REBOCO 25K MARILANDIA   18/07/2014       2,00         9.00
+  001162  CIMENTO NASSAU 50KL AP          18/07/2014       3,00        73.50
+  001791  LAJOTA 09x19x19                 18/07/2014     500,00       265.00
+  001143  PRUMO 400 GRAMAS                18/07/2014       1,00        16.50
+  001102  CREDITO                         23/08/2014     200,00      -200.00
+  000823  FERRO 1/4 12m                   27/08/2014       1,00        13.50
+  001404  CANALETA 09x19x39 BRITADO       27/08/2014      60,00       114.00
+  ----------------------------------------------------------------------------
+                                                                   continua...
+
+
+
+
+
+
+
+
+
+
+  BOTELHO MATERIAL DE CONSTRUCAO               
+  AV MURIAE, 376 - NOVA CARAPINA                   
+  Telefone:  3341-2005            FAX:  3341-2005                     Pag. 002
+  Extrato de Conta Cliente  -  a Prazo
+  Cliente...: 00131  JOSE THEMOTHEO                               
+  Endereco..: R.MANHA€U N§767                              
+  Bairro....: N.CARAPINA II   CEP.:           
+  Cidade....: SERRA                          UF..: ES
+  Telefone..:                Celular...:               
+  Data Debito :18/07/2014
+
+  Codigo  Especificacao                   Data       Quantidade   Valor       
+  ~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~~  ~~~~~~~~~~~~
+  001791  LAJOTA 09x19x19                 27/08/2014     100,00        53.00
+  001102  CREDITO                         19/09/2014     300,00      -300.00
+  000832  AREIA MEDIA BRANCA METRO        19/09/2014       0,50        39.50
+  000917  CIMENTO HOLCIN 50KL AP          19/09/2014       1,00        22.50
+  001596  BLOCO 14x19x39 BRITADO          19/09/2014      26,00        63.96
+  001791  LAJOTA 09x19x19                 19/09/2014     100,00        53.00
+  001102  CREDITO                         27/09/2014     300,00      -300.00
+  ----------------------------------------------------------------------------
+    Total de Compas...................................                  810.96
+    Total de Credito.................................                   800.00
+    Total a Pagar....................................                    10.96
+
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Sistema de Administracao Estoque - Versao 1.0   27/09/2014                                                        08:24
+
+
+
+

@@ -1,0 +1,285 @@
+#line 1 "Omenu.ch"
+#line 11 "ODEMO2.PRG"
+#line 1 "Inkey.ch"
+#line 12 "ODEMO2.PRG"
+#line 1 "Memoedit.ch"
+#line 16 "ODEMO2.PRG"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+STATIC hBar, hFileMenu, hEditMenu, hSetMenu, hSaveSubMenu, hdBASESub
+
+FUNCTION Odemo2()
+   LOCAL nChoice
+
+
+   CreateBar()
+
+   Scroll() ; SetPos(0,0)
+   DevPos( 12, 0 ) ; DevOut( "Press <F10> or Alt-<highlighted letter> to activate menu..." )
+
+
+   BarActivate( hBar )
+   nChoice := BarMenuChoice( hBar )
+   while nChoice <> 15
+      DO CASE
+      CASE nChoice == 10   
+          DO GetProc
+      CASE nChoice == 11
+          DO MemoProc
+      CASE nChoice == 14
+          DummyProc("Print option.")
+      CASE nChoice == 131
+          DummyProc("Save normal file option.")
+      CASE nChoice == 132
+          DummyProc("Save Lotus file option.")
+      CASE nChoice == 1331
+          DummyProc("Save Clipper file option.")
+      CASE nChoice == 1332
+          DummyProc("Save dBASE III+ file option.")
+      CASE nChoice == 1333
+          DummyProc("Save dBASE IV file option.")
+      OTHERWISE
+          BarActivate( hBar )
+      ENDCASE
+      nChoice := BarMenuChoice( hBar )
+   ENDDO
+
+   RETURN NIL
+
+
+
+
+
+
+
+
+STATIC FUNCTION CreateBar()
+
+
+   hBar := BarNew()
+
+
+   hEditMenu    := MenuNew( "~Edit" )
+   hFileMenu    := MenuNew( "~File" )
+   hSetMenu     := MenuNew( "~Toggles" )
+
+
+   hSaveSubMenu := MenuNew( "Save ~As       " )
+   hdBASESub    := MenuNew( "~dBASE       (DBF)  " )
+
+
+
+   PromptAdd( hEditMenu, 20,  "~Undo   " )
+   PromptAdd( hEditMenu, 21,   "Cu~t" )
+   PromptAdd( hEditMenu, 22,  "~Copy" )
+   PromptAdd( hEditMenu, 23, "~Paste" )
+   PromptAdd( hEditMenu, 24, "C~lear" )
+
+
+   PromptAdd   ( hFileMenu, 10,    "~Get Test         " ) 
+   PromptAdd   ( hFileMenu, 11,   "~Memoedit() Test  " ) 
+   PromptAdd   ( hFileMenu, 12,   "~Save        Alt-S" ) 
+
+
+   PromptAddSub( hFileMenu, 13, hSaveSubMenu ) 
+   PromptAddLine( hFileMenu )
+   PromptAdd   ( hFileMenu, 14,  "~Print       Alt-P" )
+   PromptAdd   ( hFileMenu, 15,   "E~xit        Alt-X" )
+
+
+
+
+
+
+   PromptAddToggle( hSetMenu,  30,   "~Bell",  {|lChecked| SET(26, lChecked) } )
+
+   PromptAddToggle( hSetMenu,  31,   "~Wrap",  {|lChecked| SET(35, lChecked) } )
+
+   PromptAddToggle( hSetMenu,  32,  "~Confirm  ",  {|lChecked| SET(27, lChecked) } )
+
+
+   PromptAdd   ( hSaveSubMenu, 131,  "Normal ~Text (TXT)  " )
+   PromptAdd   ( hSaveSubMenu, 132,   "~Lotus       (WK1)  " )
+   PromptAddSub( hSaveSubMenu, 133, hdBASESub )
+
+
+   PromptAdd( hdBASESub, 1331, "~Clipper     " )
+   PromptAdd( hdBASESub, 1332,  "dBASE III~+  " )
+   PromptAdd( hdBASESub, 1333,   "~dBASE IV    " )
+
+
+   PromptGray( hFileMenu, 12 )
+   PromptGray( hFileMenu, 13 )
+
+
+   IF SET(26)
+      PromptCheck( hSetMenu, 30 )
+   ENDIF
+   IF SET(35)
+      PromptCheck( hSetMenu, 31 )
+   ENDIF
+   IF SET(27)
+      PromptCheck( hSetMenu, 32 )
+   ENDIF
+
+
+   MenuAdd( hBar, hFileMenu )
+   MenuAdd( hBar, hEditMenu )
+   MenuAdd( hBar, hSetMenu )
+
+
+   PromptQuickKey( hBar, hFileMenu, 12, 287 )
+   PromptQuickKey( hBar, hFileMenu, 15, 301 )
+   PromptQuickKey( hBar, hFileMenu, 14, 281 )
+
+   RETURN NIL
+
+
+
+
+
+
+STATIC FUNCTION GetProc
+   LOCAL GetList := {}
+   LOCAL cInput  := SPACE(10)
+   LOCAL cInput2 := SPACE(10)
+
+
+   PromptEnable( hFileMenu, 12 )
+   PromptEnable( hFileMenu, 13 )
+
+   PromptAction( hFileMenu, 12, {|| ForceGetExit()} )
+
+   PromptEnable( hEditMenu, 20 )
+   PromptEnable( hEditMenu, 21 )
+   PromptEnable( hEditMenu, 22 )
+   PromptEnable( hEditMenu, 23 )
+   PromptEnable( hEditMenu, 24 )
+
+   PostExitBlock({|| ForceGetExit()})
+   BarInstall(hBar)
+
+   Scroll() ; SetPos(0,0)
+   Set( 32, "OFF" )
+   BarDisplay(hBar)
+
+   DevPos( 4, 0 ) ; DevOut( "Hello" )
+   DevPos( 5, 0 ) ; DevOut( "Input " ) ; SetPos( Row(), Col()+1 ) ; AAdd( GetList, _GET_( cInput, "cInput",,, ):display() )
+   DevPos( 6, 0 ) ; DevOut( "Input2" ) ; SetPos( Row(), Col()+1 ) ; AAdd( GetList, _GET_( cInput2, "cInput2",,, ):display() )
+   ReadModal(GetList) ; GetList := {}
+
+   BarDeInstall(hBar)
+   PostExitBlock()
+
+   IF LASTKEY() <> 27
+      DevPos( MAXROW(), 0 ) ; DevOut( "Saving..." )
+      INKEY(2)
+   ENDIF
+   Scroll() ; SetPos(0,0)
+   BarDisplay(hBar)
+
+   RETURN NIL
+
+
+
+
+
+
+STATIC FUNCTION ForceGetExit
+
+   __Keyboard( CHR(23) )
+
+   RETURN NIL
+
+
+
+
+
+
+
+STATIC FUNCTION MemoProc
+   STATIC cString := "Edit this, the menu still works."
+
+   Scroll() ; SetPos(0,0)
+   BarDisplay( hBar )
+   DispBox( 1, 0, MAXROW(), 78, 1 )
+   cString := MEMOEDIT( cString, 2, 2, MAXROW()-2, 77, .T., "EditIt" )
+
+   RETURN NIL
+
+
+
+
+
+
+FUNCTION EditIt( nMode, nLine, nCol )
+
+
+   IF nMode == 1 .OR. nMode == 2
+
+      BarActivate(hBar, LASTKEY()) 
+
+
+      IF BarMenuChoice(hBar) <> 11
+         RETURN 23
+      ENDIF
+   ENDIF
+
+   RETURN 0
+
+
+
+
+
+
+
+STATIC FUNCTION DummyProc( cString )
+
+   Scroll() ; SetPos(0,0)
+   BarDisplay( hBar )
+
+
+   PromptGray( hFileMenu, 12 )
+   PromptGray( hFileMenu, 13 )
+
+   PromptGray( hEditMenu, 20 )
+   PromptGray( hEditMenu, 21 )
+   PromptGray( hEditMenu, 22 )
+   PromptGray( hEditMenu, 23 )
+   PromptGray( hEditMenu, 24 )
+
+   BarInstall(hBar)
+   PostExitBlock( {|| ForceGetExit()} )
+
+   DevPos( 12, 0 ) ; DevOut( cString )
+   InKeyWait(0)
+
+   PostExitBlock()
+   BarDeInstall(hBar)
+
+   RETURN NIL

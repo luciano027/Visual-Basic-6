@@ -1,0 +1,1391 @@
+#line 1 "Omenu.ch"
+#line 86 "OMENU.PRG"
+#line 1 "Inkey.ch"
+#line 87 "OMENU.PRG"
+#line 1 "Array.ch"
+#line 88 "OMENU.PRG"
+#line 1 "Error.ch"
+#line 90 "OMENU.PRG"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+STATIC saBar := {}
+STATIC saMenu := {}
+STATIC sbExitBlock := NIL
+STATIC shCurrBar := NIL
+
+
+
+
+
+
+STATIC FUNCTION NilScan( aArray )
+   LOCAL x := 1
+
+   while ( x <= LEN(aArray) ) .AND. ( aArray[x] <> NIL )
+      x++
+   ENDDO
+
+   RETURN( IIF( x > LEN(aArray), 0, x ) )
+
+
+
+
+
+
+STATIC FUNCTION ATrueDel( aArray, nElement )
+
+   ADEL( aArray, nElement )
+   ASIZE( aArray, LEN( aArray ) - 1 )
+
+   RETURN( aArray )
+
+
+
+
+
+
+STATIC FUNCTION PromptFind( hMenu, nID )
+   RETURN( ASCAN( saMenu[hMenu][8], {|aPrompt| aPrompt[4] == nID} ) )
+
+
+
+
+
+
+
+STATIC FUNCTION ForceExit( hMenu )
+
+   IF sbExitBlock <> NIL
+      EVAL( sbExitBlock )
+   ENDIF
+
+   RETURN( NIL )
+
+
+
+
+
+
+
+STATIC FUNCTION BarDispPrompt( hBar, nItem )
+   LOCAL cSaveColor
+   LOCAL nSaveRow, nSaveCol
+   LOCAL aMenu
+   LOCAL cText
+   LOCAL nStatus, lLetter := .F.
+
+   cSaveColor := SETCOLOR()
+   nSaveRow   := ROW()
+   nSaveCol   := COL()
+
+   aMenu := saMenu[ saBar[hBar][4][nItem] ] 
+   cText := aMenu[9]
+
+   IF BarChoice(hBar) == nItem
+      nStatus := 3
+   ELSE
+      nStatus := 1
+      lLetter := .T.
+   ENDIF
+
+
+   SETCOLOR( saBar[hBar][5][nStatus] )
+   DevPos( aMenu[10], aMenu[11] ) ; DevOut( cText )
+
+   IF lLetter
+
+      SETCOLOR( saBar[hBar][5][2] )
+      DevPos( aMenu[10], (aMenu[11] + aMenu[13] - 1) ) ; DevOut( aMenu[12] )
+   ENDIF
+
+   SETCOLOR( cSaveColor )
+   SETPOS( nSaveRow, nSaveCol )
+
+   RETURN( hBar )
+
+
+
+
+
+
+
+STATIC FUNCTION MenuDispPrompt( hMenu, nItem )
+   LOCAL cSaveColor
+   LOCAL nSaveRow, nSaveCol
+   LOCAL nRow, nCol
+   LOCAL hBar
+   LOCAL aItem
+   LOCAL cText
+   LOCAL nStatus, lLetter := .F.
+
+   cSaveColor := SETCOLOR()
+   nSaveRow   := ROW()
+   nSaveCol   := COL()
+
+   hBar  := saMenu[hMenu][16]
+   aItem := saMenu[hMenu][8][nItem] 
+
+
+   nRow  := aItem[1]
+   nCol  := aItem[2]
+
+
+   IF ItemIsLine( hMenu, nItem )
+      cText := REPLICATE( CHR(196), saMenu[hMenu][5] )
+
+      nCol--
+      DO CASE
+      CASE saBar[hBar][6] == 1
+         cText := CHR(195) + cText + CHR(180)
+      CASE saBar[hBar][6] == 2
+         cText := CHR(199) + cText + CHR(182)
+      OTHERWISE
+         cText := CHR(196) + cText + CHR(196)
+      ENDCASE
+
+      nStatus := 2
+   ELSE
+      cText := PADR( aItem[3], saMenu[hMenu][5] )
+
+      IF aItem[6]
+         cText := STUFF(cText, 1, LEN(CHR(251)), CHR(251))
+      ENDIF
+
+      IF aItem[7] <> NIL
+         cText := STUFF(cText, 1, LEN(CHR(16)), CHR(16))
+      ENDIF
+
+      IF MenuChoice(hMenu) == nItem
+         IF aItem[5]
+            nStatus := 3
+         ELSE
+            nStatus := 5
+         ENDIF
+      ELSE
+         IF aItem[5]
+            nStatus := 1
+            lLetter := .T.
+         ELSE
+            nStatus := 4
+         ENDIF
+      ENDIF
+   ENDIF
+
+
+   SETCOLOR( saBar[hBar][5][nStatus] )
+   DevPos( nRow, nCol ) ; DevOut( cText )
+
+   IF lLetter
+
+      SETCOLOR( saBar[hBar][5][2] )
+      DevPos( aItem[1], (aItem[2] + aItem[9] - 1) ) ; DevOut( aItem[8] )
+   ENDIF
+
+   SETCOLOR( cSaveColor )
+   SETPOS( nSaveRow, nSaveCol )
+
+   RETURN( hMenu )
+
+
+
+
+
+
+STATIC FUNCTION BarOutKeys( hBar )
+   LOCAL aArray := {}
+
+   AADD( aArray, { -9, {|hBar| BarSetItem( hBar, 1 ), BarLastReq( hBar, -1103 ) }, hBar } )
+
+   RETURN( aArray )
+
+
+
+
+
+
+STATIC FUNCTION BarInKeys( hBar )
+   LOCAL aArray := {}
+
+   AADD( aArray, { 19,  {|hBar| BarLeft(hBar) }, hBar } )
+   AADD( aArray, { 4, {|hBar| BarRight(hBar) }, hBar } )
+   AADD( aArray, { 13, {|hBar| BarExecute(hBar) }, hBar } )
+   AADD( aArray, { 27,   {|hBar| BarSetItem(hBar, NIL), BarLastReq( hBar, -1102 ) }, hBar } )
+   AADD( aArray, { NIL,     {|nKey| IF( SET(26), QQOUT(CHR(7)), NIL ) } } )
+
+   RETURN( aArray )
+
+
+
+
+
+
+STATIC FUNCTION MenuKeys( hMenu ) 
+   LOCAL aArray := {}
+
+   AADD( aArray, { 5,    {|hMenu| MenuUp( hMenu ) }, hMenu } )
+   AADD( aArray, { 24,  {|hMenu| MenuDown( hMenu ) }, hMenu } )
+   AADD( aArray, { 13, {|hMenu| MenuExecute( hMenu ) }, hMenu } )
+   AADD( aArray, { 19,  {|hMenu| BarLastReq( saMenu[hMenu][16], -1104 ) }, hMenu } )
+   AADD( aArray, { 4, {|hMenu| BarLastReq( saMenu[hMenu][16], -1105 ) }, hMenu } )
+
+
+   AADD( aArray, { 27,   {|hMenu| MenuSetItem(hMenu, NIL ),  BarSetItem( saMenu[hMenu][16], NIL ),  BarLastReq( saMenu[hMenu][16], -1101 ) }, hMenu } )
+   AADD( aArray, { NIL,     {|nKey| IF( SET(26), QQOUT(CHR(7)), NIL ) } } )
+
+   RETURN( aArray )
+
+
+
+
+
+
+STATIC FUNCTION BarChoice( hBar )
+   RETURN( saBar[hBar][3] )
+
+
+
+
+
+
+STATIC FUNCTION BarLeft( hBar )
+
+   IF BarChoice( hBar ) == 1
+      IF SET(35)
+         BarSetItem( hBar, LEN(saBar[hBar][4]) )
+      ENDIF
+   ELSE
+      BarSetItem( hBar, BarChoice( hBar ) - 1 )
+   ENDIF
+
+   RETURN( hBar )
+
+
+
+
+
+
+STATIC FUNCTION BarRight( hBar )
+
+   IF BarChoice( hBar ) == LEN(saBar[hBar][4])
+      IF SET(35)
+         BarSetItem( hBar, 1 )
+      ENDIF
+   ELSE
+      BarSetItem( hBar, BarChoice( hBar ) + 1 )
+   ENDIF
+
+   RETURN( hBar )
+
+
+
+
+
+
+STATIC FUNCTION BarActon( nKey )
+
+
+   BarActivate( shCurrBar, nKey )
+
+   RETURN( NIL )
+
+
+
+
+
+
+STATIC FUNCTION BarExecute( hBar )
+   LOCAL hMenu
+
+   hMenu := saBar[hBar][4][BarChoice( hBar )]
+   EVAL( saMenu[hMenu][14], hMenu )
+
+   RETURN( hBar )
+
+
+
+
+
+
+STATIC FUNCTION BarAbort( hBar )
+
+   BarLastReq( hBar, -1101 )
+
+   RETURN( BarSetItem( hBar, NIL ) )
+
+
+
+
+
+
+STATIC FUNCTION BarExit( hBar )
+
+   BarLastReq( hBar, -1101 )
+
+   RETURN( hBar )
+
+
+
+
+
+
+STATIC FUNCTION BarLastRequest( hBar, nReq )
+
+   IF nReq <> NIL
+      saBar[hBar][7] := nReq
+   ENDIF
+
+   RETURN( saBar[hBar][7] )
+
+
+
+
+
+
+STATIC FUNCTION BarSetItem( hBar, nItem )
+   LOCAL aMenu
+   LOCAL nOldItem := saBar[hBar][3]
+
+   IF nItem <> nOldItem
+      saBar[hBar][3] := nItem
+
+      IF nOldItem <> NIL
+
+         BarDispPrompt( hBar, nOldItem )
+      ENDIF            
+
+      IF nItem <> NIL
+
+         BarDispPrompt( hBar, nItem )
+      ENDIF
+   ENDIF
+
+   RETURN( hBar )
+
+
+
+
+
+
+STATIC FUNCTION MenuLastRequest( hMenu, nReq )
+
+   IF nReq <> NIL
+      saMenu[hMenu][15] := nReq
+   ENDIF
+
+   RETURN( saMenu[hMenu][15] )
+
+
+
+
+
+
+STATIC FUNCTION MenuSetItem( hMenu, nItem )
+   LOCAL aItem
+   LOCAL nOldItem := saMenu[hMenu][7]
+
+   IF nItem <> nOldItem
+      saMenu[hMenu][7] := nItem
+
+      IF nOldItem <> NIL
+
+         MenuDispPrompt( hMenu, nOldItem )
+      ENDIF            
+
+      IF nItem <> NIL
+
+         MenuDispPrompt( hMenu, nItem )
+      ENDIF
+   ENDIF
+
+   RETURN( hMenu )                          
+
+
+
+
+
+
+STATIC FUNCTION MenuChoice( hMenu )
+   RETURN( saMenu[hMenu][7] )
+
+
+
+
+
+
+STATIC FUNCTION MenuUp( hMenu )
+   LOCAL nChoice 
+
+   nChoice := MenuChoice( hMenu )
+   IF nChoice == 1
+      IF SET(35)
+         MenuSetItem( hMenu, LEN(saMenu[hMenu][8]) )
+      ENDIF
+   ELSE
+      nChoice--
+      while ( ItemIsLine( hMenu, nChoice ) )
+         nChoice--
+      ENDDO
+      MenuSetItem( hMenu, nChoice )
+   ENDIF
+
+   RETURN( hMenu )
+
+
+
+
+
+
+STATIC FUNCTION MenuDown( hMenu )
+   LOCAL nChoice
+
+   nChoice := MenuChoice( hMenu )
+   IF nChoice == LEN(saMenu[hMenu][8])
+      IF SET(35)
+         MenuSetItem( hMenu, 1 )
+      ENDIF
+   ELSE
+      nChoice++
+      while ( ItemIsLine( hMenu, nChoice ) )
+         nChoice++
+      ENDDO
+      MenuSetItem( hMenu, nChoice )
+   ENDIF
+
+   RETURN( hMenu )
+
+
+
+
+
+
+STATIC FUNCTION MenuErase( hMenu )
+
+
+
+   RESTSCREEN(saMenu[hMenu][1], saMenu[hMenu][2],  saMenu[hMenu][3], saMenu[hMenu][4],  saMenu[hMenu][17])
+
+   saMenu[hMenu][17] := ""  
+   RETURN hMenu
+
+
+
+
+
+
+STATIC FUNCTION MenuExecute( hMenu )
+   LOCAL hBar
+   LOCAL aItem
+
+   hBar  := saMenu[hMenu][16]
+   aItem := saMenu[hMenu][8][MenuChoice(hMenu)]
+
+   IF aItem[5]
+      IF aItem[10] == NIL
+         ForceExit(hMenu)
+         BarMenuChoice( hBar, aItem[4] )
+      ELSE
+         EVAL( aItem[10], hMenu, aItem[4], aItem[11] )
+      ENDIF
+      BarLastReq( hBar, -1101 )
+      BarSetItem( hBar, NIL )
+   ENDIF
+
+   RETURN( hMenu )
+
+
+
+
+
+
+
+STATIC FUNCTION MenuActivate( hMenu )
+   LOCAL aActiveKeys
+   LOCAL nKey
+   LOCAL uResult
+   LOCAL nSaveCurs
+
+
+   saMenu[hMenu][7] := 1
+   BarLastReq( saMenu[hMenu][16], -1103 )
+
+
+   MenuDisplay( hMenu )
+
+   nSaveCurs := SET(16)
+
+
+
+
+
+   IF (ROW() >= saMenu[hMenu][1]) .AND.  (ROW() <= saMenu[hMenu][3]) .AND.  (COL() >= saMenu[hMenu][2]) .AND.  (COL() <= saMenu[hMenu][4])
+
+      SET(16, 0)
+   ENDIF
+
+
+
+   while BarLastReq( saMenu[hMenu][16] ) == -1103
+      nKey := INKEY(0)
+
+      uResult := DoKeyEvents( saMenu[hMenu][6], nKey )
+   ENDDO
+
+
+   MenuErase( hMenu )
+   SET(16, nSaveCurs)
+
+   RETURN( hMenu )
+
+
+
+
+
+
+
+STATIC FUNCTION MenuSubActivate( hMenu, nID )
+   LOCAL nPrompt, aPrompt
+   LOCAL hSub
+
+   IF ( (nPrompt := PromptFind( hMenu, nID )) > 0 )
+      aPrompt := saMenu[hMenu][8][nPrompt]
+      hSub := aPrompt[7]
+      saMenu[hSub][1] := aPrompt[1]
+
+
+      saMenu[hSub][2] := saMenu[hMenu][4] - 1
+
+
+
+      saMenu[hSub][16] := saMenu[hMenu][16]
+
+      MenuActivate( hSub )
+   ENDIF
+
+   RETURN( hMenu )
+
+
+
+
+
+STATIC FUNCTION ItemIsLine( hMenu, nItem )
+   RETURN( saMenu[hMenu][8][nItem][3] == CHR(196) )
+
+
+
+
+
+
+STATIC FUNCTION CheckIt( hMenu, nID, bBlock )
+   LOCAL lChecked 
+
+   IF (lChecked := PromptIsChecked(hMenu, nID))
+      PromptUnCheck(hMenu, nID)
+   ELSE
+      PromptCheck(hMenu, nID)
+   ENDIF
+
+   IF bBlock <> NIL
+      EVAL( bBlock, !lChecked )
+   ENDIF
+
+   RETURN( hMenu )
+
+
+
+
+
+
+
+
+
+
+
+STATIC FUNCTION DoKeyEvents( aKeys, nKey )
+   LOCAL nCurrEvent
+   LOCAL lExit   := .F.
+   LOCAL lFound  := .F.
+
+
+   IF nKey >= ASC("a") .AND. nKey <= ASC("z")
+      nKey := ASC(UPPER(CHR(nKey)))
+   ENDIF
+
+   IF (nCurrEvent := ASCAN( aKeys, {|x| x[1] == nKey} )) == 0
+
+      nCurrEvent := 0
+      while ( ! lFound ) .AND. ( nCurrEvent < LEN( aKeys ) )
+         nCurrEvent++
+         IF aKeys[nCurrEvent, 1] == NIL
+            lFound := .T.
+         ENDIF
+      ENDDO
+      lExit :=  (!lFound)
+   ENDIF
+   IF ! lExit
+
+
+      DO CASE
+      CASE LEN(aKeys[nCurrEvent]) == 2
+         EVAL( aKeys[nCurrEvent, 2], nKey )
+
+      CASE LEN(aKeys[nCurrEvent]) == 3
+         EVAL( aKeys[nCurrEvent, 2], aKeys[nCurrEvent, 3] )
+
+      CASE LEN(aKeys[nCurrEvent]) == 4
+
+         EVAL( aKeys[nCurrEvent, 2], aKeys[nCurrEvent, 3],  aKeys[nCurrEvent, 4])
+
+      CASE LEN(aKeys[nCurrEvent]) == 5
+
+
+         EVAL( aKeys[nCurrEvent, 2], aKeys[nCurrEvent, 3],  aKeys[nCurrEvent, 4],  aKeys[nCurrEvent, 5])
+
+      CASE LEN(aKeys[nCurrEvent]) == 6
+
+
+
+         EVAL( aKeys[nCurrEvent, 2], aKeys[nCurrEvent, 3],  aKeys[nCurrEvent, 4],  aKeys[nCurrEvent, 5],  aKeys[nCurrEvent, 6])
+
+      OTHERWISE
+
+
+
+
+         EVAL( aKeys[nCurrEvent, 2], aKeys[nCurrEvent, 3],  aKeys[nCurrEvent, 4],  aKeys[nCurrEvent, 5],  aKeys[nCurrEvent, 6],  aKeys[nCurrEvent, 7])
+
+      ENDCASE
+
+   ENDIF
+
+   RETURN( !lExit )
+
+
+
+
+
+
+STATIC FUNCTION LetterAsAltKey( nKey )
+   LOCAL nAltKey
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   STATIC saRegAltKeys := { { 65, 286 },  { 66, 304 },  { 67, 302 },  { 68, 288 },  { 69, 274 },  { 70, 289 },  { 71, 290 },  { 72, 291 },  { 73, 279 },  { 74, 292 },  { 75, 293 },  { 76, 294 },  { 77, 306 },  { 78, 305 },  { 79, 280 },  { 80, 281 },  { 81, 272 },  { 82, 275 },  { 83, 287 },  { 84, 276 },  { 85, 278 },  { 86, 303 },  { 87, 273 },  { 88, 301 },  { 89, 277 },  { 90, 300 } }
+
+
+   nKey    := ASC( UPPER( CHR(nKey) ) )  
+   nAltKey := ASCAN( saRegAltKeys, {|x| x[1] == nKey} )
+
+   RETURN( IIF( nAltKey > 0, saRegAltKeys[nAltKey, 2], 0 ) )
+
+
+
+
+
+
+
+STATIC FUNCTION PauseKey( nSecs )
+   LOCAL nKey
+   LOCAL bKeyBlock
+
+   nKey := INKEY( nSecs )
+
+   while ( (bKeyBlock := SETKEY(nKey)) <> NIL )
+      EVAL(bKeyBlock, PROCNAME(2), PROCLINE(2))
+      nKey := INKEY( nSecs )
+   ENDDO
+
+   RETURN( nKey )
+
+
+
+
+
+
+FUNCTION BarActivate( hBar, nKey )
+   LOCAL aActiveKeys
+   LOCAL nResult
+
+
+   IF nKey <> NIL
+      aActiveKeys := saBar[hBar][1]
+      IF !DoKeyEvents( aActiveKeys, nKey )
+         BarLastReq( hBar, -1101 )
+      ENDIF
+   ELSE
+
+      BarDisplay( hBar )
+
+
+      BarSetItem( hBar, NIL )
+      BarLastReq( hBar, -1102 )
+   ENDIF
+   while BarLastReq( hBar ) <> -1101
+      DO CASE
+      CASE BarLastReq( hBar ) == -1102
+         aActiveKeys := saBar[hBar][1]
+         nKey := INKEY(0)
+         DoKeyEvents( aActiveKeys, nKey )
+
+      CASE BarLastReq( hBar ) == -1103
+         aActiveKeys := saBar[hBar][2]
+         nKey := INKEY(0)
+         DoKeyEvents( aActiveKeys, nKey )
+
+      CASE BarLastReq( hBar ) == -1105
+         BarLastReq( hBar, -1103 )
+         BarRight( hBar )
+         BarExecute( hBar )
+
+      CASE BarLastReq( hBar ) == -1104
+         BarLastReq( hBar, -1103 )
+         BarLeft( hBar )
+         BarExecute( hBar )
+
+      ENDCASE
+   ENDDO
+
+   RETURN( BarMenuChoice( hBar ) )
+
+
+
+
+
+
+FUNCTION BarDeInstall( hBar )
+   LOCAL i
+   LOCAL aKeys := saBar[hBar][1]
+
+   FOR i := 1 TO LEN( aKeys )
+      SETKEY( aKeys[i][1], NIL )
+   NEXT
+
+   shCurrBar := NIL
+
+   RETURN hBar
+
+
+
+
+
+
+FUNCTION BarDisplay( hBar )
+   LOCAL i
+   LOCAL nLen
+   LOCAL nCol := 1, nRow := 0
+   LOCAL aMenu
+   LOCAL cSaveColor, nSaveRow, nSaveCol
+
+   nSaveRow   := ROW()
+   nSaveCol   := COL()
+   cSaveColor := SETCOLOR( saBar[hBar][5][1] )
+
+   Scroll( nRow, 0, nRow, MAXCOL() ) ; SetPos( nRow, 0 )
+
+   nLen := LEN(saBar[hBar][4])
+   FOR i := 1 TO nLen
+
+      aMenu := saMenu[ saBar[hBar][4][i] ]
+
+
+      IF ( nCol + LEN(aMenu[9]) ) > MAXCOL()
+
+         nRow++
+         nCol := 1
+         Scroll( nRow, 0, nRow, MAXCOL() ) ; SetPos( nRow, 0 )
+      ENDIF
+
+      aMenu[10] := nRow
+      aMenu[11] := nCol
+      aMenu[1]    := nRow + 1
+      aMenu[2]    := nCol - 1
+
+      BarDispPrompt( hBar, i )
+
+      nCol += LEN(aMenu[9])
+   NEXT
+   SETPOS(nSaveRow, nSaveCol)
+   SETCOLOR( cSaveColor )
+
+   RETURN( hBar )
+
+
+
+
+
+
+FUNCTION BarInstall( hBar )
+   LOCAL i
+   LOCAL aKeys := saBar[hBar][1]
+
+   FOR i := 1 TO LEN( aKeys )
+      SETKEY( aKeys[i][1], {|| BarActOn(LASTKEY())} )
+   NEXT
+
+
+   shCurrBar := hBar
+
+   RETURN hBar
+
+
+
+
+
+FUNCTION BarMenuChoice( hBar, nChoice )
+
+   IF nChoice <> NIL
+      saBar[hBar][8] := nChoice
+   ENDIF
+
+   RETURN( saBar[hBar][8] )
+
+
+
+
+
+
+FUNCTION BarNew( cColor, nBorder )
+   LOCAL aBar[8]
+   LOCAL hBarHandle
+
+
+   IF ( LEN(saBar) == 0 ) .OR. ( hBarHandle := (NilScan(saBar) == 0) )
+      AADD( saBar, aBar )
+      hBarHandle := 1
+   ELSE
+      saBar[hBarHandle] := aBar
+   ENDIF
+
+
+   aBar[1] := BarOutKeys( hBarHandle )
+   aBar[2]  := BarInKeys( hBarHandle )
+   aBar[3]  := NIL
+   aBar[8] := -999
+
+
+   aBar[5]   := ListAsArray( IIF( cColor == NIL,  IIF( ISCOLOR(), "N/BG,R/BG,W+/R,W/BG,W/R", "N/W,W+/W,W+/N,N/W,W/N" ),  cColor ) )
+   aBar[6]  := 1
+   aBar[4]   := {}
+
+   RETURN( hBarHandle )
+
+
+
+
+
+
+FUNCTION MenuAdd( hBar, hMenu )
+
+   saMenu[hMenu][16] := hBar
+
+   AADD( saBar[hBar][4], hMenu )
+
+
+
+
+
+
+
+
+
+   AADD( saBar[hBar][1],  { LetterAsAltKey(ASC(saMenu[hMenu][12])),  {|hBar, nItem| BarSetItem(hBar, nItem),  BarLastReq(hBar, -1103),  BarExecute(hBar) },  hBar,  LEN(saBar[hBar][4]) } )
+
+
+
+
+
+
+
+
+
+   AADD( saBar[hBar][2],  { ASC(saMenu[hMenu][12]),  {|hBar, nItem| BarSetItem(hBar, nItem),  BarLastReq(hBar, -1103),  BarExecute(hBar) },  hBar,  LEN(saBar[hBar][4]) } )
+   RETURN( hBar )
+
+
+
+
+
+
+FUNCTION MenuDisplay( hMenu )
+   LOCAL i
+   LOCAL hBar
+   LOCAL nLen
+   LOCAL aItem, aLongItem
+   LOCAL nRow, nCol, nLastRow, nLastCol
+   LOCAL cSaveColor, nSaveRow, nSaveCol
+
+   hBar      := saMenu[hMenu][16]
+   aItem     := saMenu[hMenu][8]
+   aLongItem := ACOMP( aItem, {|x,y| LEN(x[3]) > LEN(y[3])} )
+
+   saMenu[hMenu][5] := MAX( LEN( aLongItem[3] ), LEN( saMenu[hMenu][9] ) )
+
+   nSaveCol := COL()
+   nCol     := saMenu[hMenu][2]
+   nLastCol := nCol + saMenu[hMenu][5] + 1
+
+
+   IF nLastCol > MAXCOL()
+
+      nCol     := saMenu[hMenu][2]  := MAXCOL() - 1 - saMenu[hMenu][5]
+      nLastCol := MAXCOL()
+
+      IF nCol < 0
+
+         MenuError( 1 )
+      ENDIF   
+   ENDIF
+
+   nSaveRow := ROW()
+   nRow     := saMenu[hMenu][1]
+   nLastRow := nRow + LEN(aItem) + 1
+
+
+   IF nLastRow > MAXROW()
+
+      nRow     := saMenu[hMenu][1]  := MAXROW() - 1 - LEN(aItem)
+      nLastCol := MAXROW()
+
+      IF nRow < 0
+
+         MenuError( 2 )
+      ENDIF   
+   ENDIF
+
+   saMenu[hMenu][17] := SAVESCREEN(nRow, nCol, nLastRow, nLastCol)
+   saMenu[hMenu][3] := nLastRow
+   saMenu[hMenu][4] := nLastCol
+
+   cSaveColor := SETCOLOR( saBar[hBar][5][1] )
+
+   Scroll( nRow, nCol, nLastRow, nLastCol ) ; SetPos( nRow, nCol )
+
+   SETCOLOR( saBar[hBar][5][2] )
+
+   DO CASE
+   CASE saBar[hBar][6] == 1
+       DispBox( nRow, nCol, nLastRow, nLastCol, 1 )
+   CASE saBar[hBar][6] == 2
+       DispBox( nRow, nCol, nLastRow, nLastCol, 2 )
+   ENDCASE
+
+   SETCOLOR( cSaveColor )
+
+   nLen := LEN(aItem)
+   FOR i := 1 TO nLen
+      aItem[i][1] := nRow + i
+      aItem[i][2] := nCol + 1
+
+      MenuDispPrompt( hMenu, i )
+   NEXT
+   SETPOS( nSaveRow, nSaveCol )
+
+   RETURN( hMenu )
+
+
+
+
+
+
+FUNCTION MenuNew( cTitle )
+   LOCAL aMenu[17]
+   LOCAL hMenuHandle
+
+   cTitle := " " + cTitle + " "  
+
+
+   IF ( LEN(saMenu) == 0 ) .OR. ( hMenuHandle := (NilScan(saMenu) == 0) )
+      AADD( saMenu, aMenu )
+      hMenuHandle := LEN( saMenu )
+   ELSE
+      saMenu[hMenuHandle] := aMenu
+   ENDIF
+
+
+   aMenu[1]    := 0
+   aMenu[2]    := 0
+   aMenu[5]  := 0
+   aMenu[6]   := MenuKeys( hMenuHandle )
+   aMenu[8]  := {}
+   aMenu[9]  := STRTRAN( cTitle, "~", "" )
+   aMenu[13] := AT( "~", cTitle )
+
+   aMenu[12] := IIF( aMenu[13] == 0, "",  SUBSTR( cTitle, aMenu[13] + 1, 1 ) )
+   aMenu[14]  := {|hMenu| MenuActivate(hMenu) }
+   aMenu[7] := NIL
+
+   RETURN( hMenuHandle )
+
+
+
+
+
+
+FUNCTION PostExitBlock( bBlock )
+   LOCAL bOldBlock := sbExitBlock
+
+   sbExitBlock := bBlock
+
+   RETURN( bOldBlock )
+
+
+
+
+
+
+FUNCTION PromptAction( hMenu, nID, bBlock )
+   LOCAL nPrompt
+
+   IF ( (nPrompt := PromptFind( hMenu, nID )) > 0 )
+      saMenu[hMenu][8][nPrompt][10] := bBlock
+   ENDIF
+
+   RETURN( hMenu )
+
+
+
+
+
+
+FUNCTION PromptAdd( hMenu, nID, cText, bBlock )
+   LOCAL aPrompt[11]
+
+   cText := SPACE(2) + cText
+
+   aPrompt[3]    := STRTRAN( cText, "~", "" )
+   aPrompt[4]      := nID
+   aPrompt[5]  := .T.
+   aPrompt[6] := .F.
+   aPrompt[7] := NIL
+   aPrompt[9]  := AT( "~", cText )
+
+   aPrompt[8]  := IIF( aPrompt[9] == 0, "",  SUBSTR( cText, aPrompt[9] + 1, 1 ) )
+
+
+   aPrompt[10]   := bBlock
+
+   AADD( saMenu[hMenu][8], aPrompt )
+
+
+
+
+
+   AADD( saMenu[hMenu][6], { ASC(UPPER(aPrompt[8])),  {|hMenu,nID| MenuSetItem(hMenu,PromptFind(hMenu,nID)), MenuExecute(hMenu)},  hMenu, nID} )
+
+   RETURN( hMenu )
+
+
+
+
+
+
+FUNCTION PromptAddLine( hMenu )
+   LOCAL aPrompt[11]
+
+   aPrompt[3]    := CHR(196)
+   aPrompt[5]  := .F.
+   aPrompt[6] := .F.
+   aPrompt[7] := NIL
+
+
+   AADD( saMenu[hMenu][8], aPrompt )
+
+   RETURN( hMenu )
+
+
+
+
+
+
+FUNCTION PromptAddSub( hMenu, nID, hSubMenu )
+   LOCAL aPrompt[11]
+   LOCAL cText
+
+
+   cText := STUFF(SPACE(2-1) + saMenu[hSubMenu][9], 1, 1, CHR(16))
+
+   aPrompt[3]    := cText
+   aPrompt[4]      := nID
+   aPrompt[7] := hSubMenu
+   aPrompt[6] := .F.
+   aPrompt[5]  := .T.
+   aPrompt[9]  := saMenu[hSubMenu][13] + 1  
+   aPrompt[8]  := saMenu[hSubMenu][12]
+
+   aPrompt[10]   := {|hMenu,nID| MenuSubActivate( hMenu, nID ) }
+
+   AADD( saMenu[hMenu][8], aPrompt )
+
+
+
+
+
+   AADD( saMenu[hMenu][6], { ASC(UPPER(aPrompt[8])),  {|hMenu,nID| MenuSetItem(hMenu,PromptFind(hMenu,nID)), MenuExecute(hMenu)},  hMenu, nID} )
+
+   RETURN( hMenu )
+
+
+
+
+
+
+
+
+FUNCTION PromptAddToggle( hMenu, nID, cText, bBlock )
+   LOCAL aPrompt[11]
+
+   cText := SPACE(2) + cText
+
+   aPrompt[3]    := STRTRAN( cText, "~", "" )
+   aPrompt[4]      := nID
+   aPrompt[5]  := .T.
+   aPrompt[6] := .F.
+   aPrompt[7] := NIL
+   aPrompt[9]  := AT( "~", cText )
+
+   aPrompt[8]  := IIF( aPrompt[9] == 0, "",  SUBSTR( cText, aPrompt[9] + 1, 1 ) )
+
+
+   aPrompt[10]    := {|hMenu, nID, bBlock| CheckIt(hMenu, nID, bBlock)}
+   aPrompt[11] := bBlock
+
+
+   AADD( saMenu[hMenu][8], aPrompt )
+
+
+
+
+
+   AADD( saMenu[hMenu][6], { ASC(UPPER(aPrompt[8])),  {|hMenu,nID| MenuSetItem(hMenu,PromptFind(hMenu,nID)), MenuExecute(hMenu)},  hMenu, nID} )
+
+   RETURN( hMenu )
+
+
+
+
+
+
+FUNCTION PromptCheck( hMenu, nID )
+   LOCAL nPrompt
+
+   IF ( (nPrompt := PromptFind( hMenu, nID )) > 0 )
+      saMenu[hMenu][8][nPrompt][6] := .T.
+   ENDIF
+
+   RETURN( hMenu )
+
+
+
+
+
+
+FUNCTION PromptEnable( hMenu, nID )
+   LOCAL nPrompt
+
+   IF ( (nPrompt := PromptFind( hMenu, nID )) > 0 )
+      saMenu[hMenu][8][nPrompt][5] := .T.
+   ENDIF
+
+   RETURN( hMenu )
+
+
+
+
+
+
+FUNCTION PromptGray( hMenu, nID )
+   LOCAL nPrompt
+
+   IF ( (nPrompt := PromptFind( hMenu, nID )) > 0 )
+      saMenu[hMenu][8][nPrompt][5] := .F.
+   ENDIF
+
+   RETURN( hMenu )
+
+
+
+
+
+
+FUNCTION PromptIsChecked( hMenu, nID )
+   LOCAL nPrompt
+
+   nPrompt := PromptFind( hMenu, nID )
+
+   RETURN( IIF( nPrompt == 0, .F., saMenu[hMenu][8][nPrompt][6] ) )
+
+
+
+
+
+
+FUNCTION PromptIsEnabled( hMenu, nID )
+   LOCAL nPrompt
+
+   nPrompt := PromptFind( hMenu, nID )
+
+   RETURN( IIF( nPrompt == 0, .F., saMenu[hMenu][8][nPrompt][5] ) )
+
+
+
+
+
+
+FUNCTION PromptQuickKey( hBar, hMenu, nID, nKey )
+   LOCAL nPrompt
+
+   IF ( (nPrompt := PromptFind( hMenu, nID )) > 0 )
+
+
+
+      AADD( saBar[hBar][1], { nKey,  {|hMenu, nID| saMenu[hMenu][7] := PromptFind( hMenu, nID ),  MenuExecute(hMenu)},  hMenu, nID } )
+   ENDIF
+
+   RETURN (hMenu)
+
+
+
+
+
+
+FUNCTION PromptUnCheck( hMenu, nID )
+   LOCAL nPrompt
+
+   IF ( (nPrompt := PromptFind( hMenu, nID )) > 0 )
+      saMenu[hMenu][8][nPrompt][6] := .F.
+   ENDIF
+
+   RETURN( hMenu )
+
+
+
+
+
+
+STATIC FUNCTION MenuError( nErr )
+   LOCAL oErr
+
+   oErr := ErrorNew()
+
+   oErr:canDefault    := .F.
+   oErr:canRetry      := .F.
+   oErr:canSubstitute := .F.
+
+   oErr:genCode       := 8
+   oErr:severity      := 2
+   oErr:description   := "Menu will not fit on screen"
+   oErr:subCode       := nErr
+   oErr:subSystem     := "OMENU"
+
+   EVAL( ERRORBLOCK(), oErr )
+
+   __Quit()  
+   RETURN NIL

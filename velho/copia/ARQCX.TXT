@@ -1,0 +1,35 @@
+
+  BOTELHO MATERIAL DE CONSTRUCAO               
+  AV MURIAE, 376 - NOVA CARAPINA                   
+  Telefone:  3341-2005            FAX:  3341-2005                     Pag. 001
+  Extrato Cliente 
+  Data..: 26/10/2010
+  Vendedor : BOTELHO                                      
+
+  Codigo  Especificacao                            Quant    P.Venda Total      
+  ~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~ ~~~~~~~ ~~~~~~~~~~ 
+  000015  TUBO ESG 100mm x 6m CL A                     3,00  35,000    105,00
+  000090  JOELHO 100x45 ESG                            1,00   4,500      4,50
+  ----------------------------------------------------------------------------
+   Total de Compas..:    109,50 Desconto..:           Total a Pagar..:   109,50
+  ----------------------------------------------------------------------------
+
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Sistema de Administracao Estoque - Versao 1.0  26/10/2010                                                         08:56
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

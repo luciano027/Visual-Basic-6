@@ -1,0 +1,100 @@
+
+  BOTELHO MATERIAL DE CONSTRUCAO               
+  AV MURIAE, 376 - NOVA CARAPINA                   
+  Telefone:  3341-2005            FAX:  3341-2005                     Pag. 001
+  Extrato de Conta Cliente  -  a Prazo
+  Cliente...: 00364  OSMAR VANDGUS                                
+  Endereco..: R.TRES LAGOAS N 375                          
+  Bairro....: N.CARAPINA II   CEP.: 29160-000 
+  Cidade....: SERRA                          UF..: ES
+  Telefone..: 99876-8852     Celular...:               
+  Data Debito :08/09/2014
+
+  Codigo  Especificacao                   Data       Quantidade   Valor       
+  ~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~~  ~~~~~~~~~~~~
+  001037  DEBITO ANTERIOR                 08/09/2014      39,00        39.00
+  000131  VALVULA P/ TANQUE N.2           10/09/2014       3,00         7.50
+  000151  SILICONE 50G                    10/09/2014       2,00         7.60
+  000596  ANEL DE SERA P/ VASO SANITARIO  10/09/2014       1,00         9.50
+  000780  PARAFUSO P/ VAZO INOXSIDAVEL    10/09/2014       2,00         5.00
+  001047  SIFAO SANFONADO UNIVER SAIDA 4  10/09/2014       4,00        34.00
+  001639  ENGATE PLASTICO 50CM 1/2        10/09/2014       2,00         9.00
+  000450  VALVULA AMERICANA INOX 1622 31  11/09/2014       1,00        18.50
+  000077  FITA VEDA ROSCA 18mmx25mt       11/09/2014       1,00         3.00
+  ----------------------------------------------------------------------------
+                                                                   continua...
+
+
+
+
+
+
+
+
+
+
+  BOTELHO MATERIAL DE CONSTRUCAO               
+  AV MURIAE, 376 - NOVA CARAPINA                   
+  Telefone:  3341-2005            FAX:  3341-2005                     Pag. 002
+  Extrato de Conta Cliente  -  a Prazo
+  Cliente...: 00364  OSMAR VANDGUS                                
+  Endereco..: R.TRES LAGOAS N 375                          
+  Bairro....: N.CARAPINA II   CEP.: 29160-000 
+  Cidade....: SERRA                          UF..: ES
+  Telefone..: 99876-8852     Celular...:               
+  Data Debito :08/09/2014
+
+  Codigo  Especificacao                   Data       Quantidade   Valor       
+  ~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~~  ~~~~~~~~~~~~
+  001102  CREDITO                         12/09/2014     135,00      -135.00
+  000211  TINTA 18 L PVA ARGALIT BRANCA   15/09/2014       1,00        85.00
+  000433  PREGO PAKOTINHO DIVERSOS 40GR   15/09/2014       3,00         6.00
+  000151  SILICONE 50G                    15/09/2014       2,00         7.60
+  001078  LIXA FERRO N.180                17/09/2014       1,00         2.50
+  000082  REDUCAO 50x40 ESG               18/09/2014       1,00         1.70
+  000091  JOELHO 50x90 ESG                18/09/2014       2,00         4.40
+  000672  LIXA FERRO N.100                18/09/2014       2,00         5.00
+  000954  TUBO ESG 50mm 6 METROS FORTLEV  18/09/2014       2,00        47.00
+  000996  JOELHO 40 ESG                   18/09/2014       1,00         1.20
+  ----------------------------------------------------------------------------
+                                                                   continua...
+
+
+
+
+
+
+
+
+
+  BOTELHO MATERIAL DE CONSTRUCAO               
+  AV MURIAE, 376 - NOVA CARAPINA                   
+  Telefone:  3341-2005            FAX:  3341-2005                     Pag. 003
+  Extrato de Conta Cliente  -  a Prazo
+  Cliente...: 00364  OSMAR VANDGUS                                
+  Endereco..: R.TRES LAGOAS N 375                          
+  Bairro....: N.CARAPINA II   CEP.: 29160-000 
+  Cidade....: SERRA                          UF..: ES
+  Telefone..: 99876-8852     Celular...:               
+  Data Debito :08/09/2014
+
+  Codigo  Especificacao                   Data       Quantidade   Valor       
+  ~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~~  ~~~~~~~~~~~~
+  000087  JOELHO 50x45 ESG                22/09/2014       1,00         2.80
+  001185  JUNCAO 50x50 ESG                22/09/2014       1,00         5.20
+  ----------------------------------------------------------------------------
+    Total de Compas...................................                  301.50
+    Total de Credito.................................                   135.00
+    Total a Pagar....................................                   166.50
+
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Sistema de Administracao Estoque - Versao 1.0   27/09/2014                                                        08:21
+
+
+
+
+
+
+
+
+

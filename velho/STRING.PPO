@@ -1,0 +1,84 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FUNCTION CityState( cCity, cState, cZip )
+   RETURN RTRIM(cCity) + ", " + RTRIM(cState) + "  " + cZip
+
+
+
+
+
+
+
+
+FUNCTION ListAsArray( cList, cDelimiter )
+   LOCAL nPos
+   LOCAL aList := {}                            
+
+   IF cDelimiter = NIL
+      cDelimiter := ","
+   ENDIF
+
+   while (nPos := AT(cDelimiter, cList)) <> 0
+      AADD(aList, SUBSTR(cList, 1, nPos - 1))   
+      cList := SUBSTR(cList, nPos + 1)
+   ENDDO
+   AADD(aList, cList)                           
+
+   RETURN aList                                 
+
+
+
+
+
+
+
+
+FUNCTION Occurs( cSearch, cTarget )
+   LOCAL nPos, nCount := 0
+   while !EMPTY( cTarget )
+      IF (nPos := AT( cSearch, cTarget )) <> 0
+         nCount++
+         cTarget := SUBSTR( cTarget, nPos + 1 )
+      ELSE     
+
+         cTarget := ""
+      ENDIF
+   ENDDO
+   RETURN nCount
+
+
+
+
+
+
+
+
+FUNCTION Proper( cString )
+   LOCAL nPos, cWord, cProper := ""
+   while !EMPTY( cString )
+      IF (nPos := AT(" ", cString)) <> 0
+         cWord := SUBSTR( cString, 1, nPos )
+         cString := SUBSTR( cString, nPos + 1 )
+      ELSE     
+
+         cWord := cString
+         cString := ""
+      ENDIF
+      cProper := cProper + UPPER(SUBSTR(cWord, 1, 1)) + SUBSTR(cWord, 2)
+   ENDDO
+   RETURN cProper

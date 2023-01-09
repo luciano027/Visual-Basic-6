@@ -1,0 +1,245 @@
+[Root]
+Most Recent Package=Standard Setup Package
+
+
+[Package|Standard Setup Package|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=g:\_sistemas\vb6\Papelaria\instalacao
+
+[Package|Standard Setup Package|Configure DAO ISAMs]
+Applicable=Yes
+Jet 2.x=Yes
+
+[Package|Standard Setup Package|Configure DAO ODBC]
+JetWorkspace=Yes
+ODBCDirect=Yes
+
+[Package|Standard Setup Package|Files Found]
+
+[Package|Standard Setup Package|Files Released]
+
+[Package|Standard Setup Package|Missing Dependency Information]
+D:\Program Files\Common Files\System\ado\msado25.tlb=
+D:\Program Files\Common Files\Data Dynamics\ActiveReports Pro\arpro2.dll=
+D:\Program Files\Common Files\Data Dynamics\ActiveReports Pro\textexpt.dll=
+D:\Program Files\Common Files\Data Dynamics\ActiveReports Pro\rtfexpt.dll=
+D:\Program Files\Common Files\Data Dynamics\ActiveReports Pro\pdfexpt.dll=
+D:\Program Files\Common Files\Data Dynamics\ActiveReports Pro\htmlexpt.dll=
+D:\Program Files\Common Files\Data Dynamics\ActiveReports Pro\exclexpt.dll=
+D:\WINDOWS\system32\quartz.dll=
+D:\WINDOWS\system32\msimg32.dll=
+C:\Windows\SysWOW64\ieframe.dll=
+C:\Program Files (x86)\Common Files\Data Dynamics\ActiveReports Pro\arpro2.dll=
+C:\Program Files (x86)\Common Files\Data Dynamics\ActiveReports Pro\textexpt.dll=
+C:\Program Files (x86)\Common Files\Data Dynamics\ActiveReports Pro\rtfexpt.dll=
+C:\Program Files (x86)\Common Files\Data Dynamics\ActiveReports Pro\pdfexpt.dll=
+C:\Program Files (x86)\Common Files\Data Dynamics\ActiveReports Pro\htmlexpt.dll=
+C:\Program Files (x86)\Common Files\Data Dynamics\ActiveReports Pro\exclexpt.dll=
+C:\Windows\System32\quartz.dll=
+C:\Windows\System32\msimg32.dll=
+C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.19041.488_none_89e6152f0b32762e\comctl32.dll=
+
+[Package|Standard Setup Package|Out-of-Date Dependency Information]
+D:\WINDOWS\system32\comdlg32.ocx=
+D:\WINDOWS\system32\tabctl32.ocx=
+D:\WINDOWS\system32\msinet.ocx=
+D:\WINDOWS\system32\richtx32.ocx=
+D:\WINDOWS\system32\MSCOMCT2.OCX=
+D:\WINDOWS\system32\MSCOMCTL.OCX=
+D:\WINDOWS\system32\MShflxgd.ocx=
+D:\WINDOWS\system32\msstdfmt.dll=
+C:\Windows\SysWOW64\MSCOMCTL.OCX=
+C:\Windows\SysWOW64\scrrun.dll=
+
+[Package|Standard Setup Package|Files Added]
+
+[Package|Standard Setup Package|Files Removed]
+
+[Package|Standard Setup Package|Files In Project]
+G:\_sistemas\vb6\Papelaria\programa\Vendas.exe=Yes
+C:\Windows\System32\msvbvm60.dll=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.19041.488_none_89e6152f0b32762e\comctl32.dll=Yes
+C:\Windows\System32\msimg32.dll=Yes
+C:\Windows\System32\quartz.dll=Yes
+C:\Program Files (x86)\Common Files\Data Dynamics\ActiveReports Pro\exclexpt.dll=Yes
+C:\Program Files (x86)\Common Files\Data Dynamics\ActiveReports Pro\htmlexpt.dll=Yes
+C:\Program Files (x86)\Common Files\Data Dynamics\ActiveReports Pro\pdfexpt.dll=Yes
+C:\Program Files (x86)\Common Files\Data Dynamics\ActiveReports Pro\rtfexpt.dll=Yes
+C:\Program Files (x86)\Common Files\Data Dynamics\ActiveReports Pro\textexpt.dll=Yes
+C:\Program Files (x86)\Common Files\Data Dynamics\ActiveReports Pro\arpro2.dll=Yes
+C:\Program Files (x86)\Common Files\Microsoft Shared\DAO\DAO350.DLL=Yes
+C:\Windows\System32\MSJET35.DLL=Yes
+C:\Windows\System32\MSJTER35.DLL=Yes
+C:\Windows\System32\MSJINT35.DLL=Yes
+C:\Windows\System32\vbajet32.dll=Yes
+C:\Windows\System32\expsrv.dll=Yes
+C:\Windows\System32\MSRD2X35.DLL=Yes
+C:\Windows\System32\MSREPL35.DLL=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=Yes
+C:\Windows\System32\VB5DB.DLL=Yes
+C:\Windows\SysWOW64\MSSTDFMT.DLL=Yes
+C:\Windows\SysWOW64\ieframe.dll=Yes
+C:\Windows\SysWOW64\scrrun.dll=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT.DLL=Yes
+C:\Windows\SysWOW64\MSDBRPTR.DLL=Yes
+C:\Windows\SysWOW64\MSHFLXGD.OCX=Yes
+C:\Windows\SysWOW64\MSCOMCT2.OCX=Yes
+C:\Windows\SysWOW64\MSCHRT20.OCX=Yes
+C:\Windows\SysWOW64\RICHTX32.OCX=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+C:\Windows\SysWOW64\MSINET.OCX=Yes
+C:\Windows\SysWOW64\MSADODC.OCX=Yes
+C:\Windows\SysWOW64\TABCTL32.OCX=Yes
+C:\Windows\SysWOW64\COMDLG32.OCX=Yes
+C:\Windows\SysWOW64\MSCOMCTL.OCX=Yes
+C:\Windows\SysWOW64\MSDATGRD.OCX=Yes
+C:\Windows\SysWOW64\COMCTL32.OCX=Yes
+C:\Windows\System32\MSRDO20.DLL=Yes
+C:\Windows\System32\RDOCURS.DLL=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Windows\System32\VB6STKIT.DLL=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|Standard Setup Package|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package|Install Locations]
+C:\_sistemas\vb6\osvaldo\update\Vendas.exe=$(AppPath)
+D:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+D:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+D:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+D:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+D:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\system32\msimg32.dll=$(WinSysPath)
+D:\WINDOWS\system32\quartz.dll=$(WinSysPath)
+D:\Program Files\Common Files\Data Dynamics\ActiveReports Pro\exclexpt.dll=$(WinSysPath)
+D:\Program Files\Common Files\Data Dynamics\ActiveReports Pro\htmlexpt.dll=$(WinSysPath)
+D:\Program Files\Common Files\Data Dynamics\ActiveReports Pro\pdfexpt.dll=$(WinSysPath)
+D:\Program Files\Common Files\Data Dynamics\ActiveReports Pro\rtfexpt.dll=$(WinSysPath)
+D:\Program Files\Common Files\Data Dynamics\ActiveReports Pro\textexpt.dll=$(WinSysPath)
+D:\Program Files\Common Files\Data Dynamics\ActiveReports Pro\arpro2.dll=$(WinSysPath)
+D:\Program Files\Common Files\System\ado\msado25.tlb=$(WinSysPath)
+D:\Program Files\Common Files\Microsoft Shared\DAO\DAO350.DLL=$(MSDAOPath)
+D:\WINDOWS\system32\MSJET35.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\system32\MSJTER35.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\system32\MSJINT35.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\system32\vbajet32.dll=$(WinSysPathSysFile)
+D:\WINDOWS\system32\expsrv.dll=$(WinSysPathSysFile)
+D:\WINDOWS\system32\MSRD2X35.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\system32\MSREPL35.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\system32\VB5DB.DLL=$(WinSysPath)
+D:\WINDOWS\system32\msstdfmt.dll=$(WinSysPath)
+D:\WINDOWS\system32\MShflxgd.ocx=$(WinSysPath)
+D:\WINDOWS\system32\MSCOMCTL.OCX=$(WinSysPath)
+D:\WINDOWS\system32\MSCOMCT2.OCX=$(WinSysPath)
+D:\WINDOWS\system32\MSCHRT20.OCX=$(WinSysPath)
+D:\WINDOWS\system32\richtx32.ocx=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+D:\WINDOWS\system32\msinet.ocx=$(WinSysPath)
+D:\WINDOWS\system32\MSADODC.OCX=$(WinSysPath)
+D:\WINDOWS\system32\tabctl32.ocx=$(WinSysPath)
+D:\WINDOWS\system32\comdlg32.ocx=$(WinSysPath)
+D:\WINDOWS\system32\MSRDO20.DLL=$(WinSysPath)
+D:\WINDOWS\system32\RDOCURS.DLL=$(WinSysPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+D:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\_sistemas\vb6\osvaldo\programa\Vendas=$(AppPath)
+G:\_sistemas\vb6\Papelaria\programa\Vendas.exe=$(AppPath)
+C:\Windows\System32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_5.82.19041.488_none_89e6152f0b32762e\comctl32.dll=$(WinSysPath)
+C:\Windows\System32\msimg32.dll=$(WinSysPath)
+C:\Windows\System32\quartz.dll=$(WinSysPath)
+C:\Program Files (x86)\Common Files\Data Dynamics\ActiveReports Pro\exclexpt.dll=$(WinSysPath)
+C:\Program Files (x86)\Common Files\Data Dynamics\ActiveReports Pro\htmlexpt.dll=$(WinSysPath)
+C:\Program Files (x86)\Common Files\Data Dynamics\ActiveReports Pro\pdfexpt.dll=$(WinSysPath)
+C:\Program Files (x86)\Common Files\Data Dynamics\ActiveReports Pro\rtfexpt.dll=$(WinSysPath)
+C:\Program Files (x86)\Common Files\Data Dynamics\ActiveReports Pro\textexpt.dll=$(WinSysPath)
+C:\Program Files (x86)\Common Files\Data Dynamics\ActiveReports Pro\arpro2.dll=$(WinSysPath)
+C:\Program Files (x86)\Common Files\Microsoft Shared\DAO\DAO350.DLL=$(MSDAOPath)
+C:\Windows\System32\MSJET35.DLL=$(WinSysPathSysFile)
+C:\Windows\System32\MSJTER35.DLL=$(WinSysPathSysFile)
+C:\Windows\System32\MSJINT35.DLL=$(WinSysPathSysFile)
+C:\Windows\System32\vbajet32.dll=$(WinSysPathSysFile)
+C:\Windows\System32\expsrv.dll=$(WinSysPathSysFile)
+C:\Windows\System32\MSRD2X35.DLL=$(WinSysPathSysFile)
+C:\Windows\System32\MSREPL35.DLL=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=$(WinSysPathSysFile)
+C:\Windows\System32\VB5DB.DLL=$(WinSysPath)
+C:\Windows\SysWOW64\MSSTDFMT.DLL=$(WinSysPath)
+C:\Windows\SysWOW64\ieframe.dll=$(WinSysPath)
+C:\Windows\SysWOW64\scrrun.dll=$(WinSysPath)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT.DLL=$(WinSysPathSysFile)
+C:\Windows\SysWOW64\MSDBRPTR.DLL=$(WinSysPath)
+C:\Windows\SysWOW64\MSHFLXGD.OCX=$(WinSysPath)
+C:\Windows\SysWOW64\MSCOMCT2.OCX=$(WinSysPath)
+C:\Windows\SysWOW64\MSCHRT20.OCX=$(WinSysPath)
+C:\Windows\SysWOW64\RICHTX32.OCX=$(WinSysPath)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\Windows\SysWOW64\MSINET.OCX=$(WinSysPath)
+C:\Windows\SysWOW64\MSADODC.OCX=$(WinSysPath)
+C:\Windows\SysWOW64\TABCTL32.OCX=$(WinSysPath)
+C:\Windows\SysWOW64\COMDLG32.OCX=$(WinSysPath)
+C:\Windows\SysWOW64\MSCOMCTL.OCX=$(WinSysPath)
+C:\Windows\SysWOW64\MSDATGRD.OCX=$(WinSysPath)
+C:\Windows\SysWOW64\COMCTL32.OCX=$(WinSysPath)
+C:\Windows\System32\MSRDO20.DLL=$(WinSysPath)
+C:\Windows\System32\RDOCURS.DLL=$(WinSysPath)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\Windows\System32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|Standard Setup Package|Configure Shared Files]
+Applicable=Yes
+C:\_sistemas\vb6\osvaldo\update\Vendas.exe=Yes
+D:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\_sistemas\vb6\osvaldo\programa\Vendas=Yes
+G:\_sistemas\vb6\Papelaria\programa\Vendas.exe=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+
+[Package|Standard Setup Package|Distribution]
+Type=single
+Size=
+Title=Vendas - Papelaria
+
+[Package|Standard Setup Package|IconGroups]
+Group0=Vendas
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|Standard Setup Package|Vendas]
+Icon1=Vendas.exe
+Title1=Vendas
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Standard Setup Package|Package]
+PackageFolder=g:\_sistemas\vb6\Papelaria\instalacao
+ProjectFolder=G:\_sistemas\vb6\Papelaria\programa
+ServerSideCab=
+File1=g:\_sistemas\vb6\Papelaria\instalacao\setup.exe
+File2=g:\_sistemas\vb6\Papelaria\instalacao\Setup.Lst
+File3=g:\_sistemas\vb6\Papelaria\instalacao\Vendas.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

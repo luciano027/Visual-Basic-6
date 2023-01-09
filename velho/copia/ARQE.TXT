@@ -1,0 +1,32 @@
+
+  BOTELHO MATERIAL DE CONSTRUCAO               
+  AV MURIAE, 376 - NOVA CARAPINA                   
+  Telefone:  3341-2005            FAX:  3341-2005                     Pag. 001
+  Extrato de Conta Cliente  -  a Prazo
+  Cliente...: 00445  LEANDRO ARCANJO                              
+  Endereco..: R.GUARACIARA N§101                           
+  Bairro....: MONTE VERDE     CEP.: 29160000  
+  Cidade....: SERRA                          UF..: ES
+  Telefone..: 3282-1002      Celular...:               
+  Data Debito :08/03/2006
+
+  Codigo  Especificacao                   Data       Quantidade   Valor       
+  ~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~~  ~~~~~~~~~~~~
+  001135  JANELA COLNIAL 100x100 ELCALIP  08/03/2006       2,00       114.00
+  ----------------------------------------------------------------------------
+    Total de Compas...................................                  114.00
+    Total de Credito.................................                     0.00
+    Total a Pagar....................................                   114.00
+
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Sistema de Administracao Estoque - Versao 1.0   07/04/2006                                                        12:00
+
+
+
+
+
+
+
+
+
+

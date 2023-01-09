@@ -1,0 +1,45 @@
+
+=====================================
+* LOG GERADO EM 15/4/2015 17:46:31 *
+=====================================
+
+[15/4/2015 17:46:31] Iniciando atualização...
+[15/4/2015 17:46:33] Fechando aplicação C:\_sistemas\vb6\osvaldo\programa\vendas.exe
+[15/4/2015 17:46:35] Efetuando backup dos arquivos existentes...
+.....................Arquivo de backup: C:\_sistemas\vb6\osvaldo\programa\vendas150415_1746.exe
+[15/4/2015 17:46:37] Copiando os novos arquivos... 
+.....................Arquivo local: C:\_sistemas\vb6\osvaldo\programa\vendas.exe - ok!
+.....................Arquivo atualização: c:\_sistemas\vb6\osvaldo\Update\vendas.exe - ok! 
+[15/4/2015 17:46:40] Finalizando atualização e iniciando o programa...
+[15/4/2015 17:46:40] Instalação finalizada com sucesso!
+
+
+=====================================
+* LOG GERADO EM 15/4/2015 17:47:24 *
+=====================================
+
+[15/4/2015 17:47:24] Iniciando atualização...
+[15/4/2015 17:47:26] Fechando aplicação C:\_sistemas\vb6\osvaldo\programa\vendas.exe
+[15/4/2015 17:47:28] Efetuando backup dos arquivos existentes...
+.....................Arquivo de backup: C:\_sistemas\vb6\osvaldo\programa\vendas150415_1747.exe
+[15/4/2015 17:47:30] Copiando os novos arquivos... 
+.....................Arquivo local: C:\_sistemas\vb6\osvaldo\programa\vendas.exe - ok!
+.....................Arquivo atualização: c:\_sistemas\vb6\osvaldo\Update\vendas.exe - ok! 
+[15/4/2015 17:47:32] Finalizando atualização e iniciando o programa...
+[15/4/2015 17:47:32] Instalação finalizada com sucesso!
+
+
+=====================================
+* LOG GERADO EM 15/4/2015 18:58:21 *
+=====================================
+
+[15/4/2015 18:58:21] Iniciando atualização...
+[15/4/2015 18:58:23] Fechando aplicação C:\_sistemas\vb6\osvaldo\programa\vendas.exe
+[15/4/2015 18:58:25] Efetuando backup dos arquivos existentes...
+.....................Arquivo de backup: C:\_sistemas\vb6\osvaldo\programa\vendas150415_1858.exe
+[15/4/2015 18:58:27] Copiando os novos arquivos... 
+.....................Arquivo local: C:\_sistemas\vb6\osvaldo\programa\vendas.exe - ok!
+.....................Arquivo atualização: c:\_sistemas\vb6\osvaldo\Update\vendas.exe - ok! 
+[15/4/2015 18:58:29] Finalizando atualização e iniciando o programa...
+[15/4/2015 18:58:29] Instalação finalizada com sucesso!
+

@@ -1,0 +1,35 @@
+
+  BOTELHO MATERIAL DE CONSTRUCAO               
+  AV MURIAE, 376 - NOVA CARAPINA                   
+  Telefone:  3341-2005            FAX:  3341-2005                     Pag. 001
+  Extrato Cliente 
+  Data..: 18/05/2013
+  Vendedor : WESTER                                       
+
+  Codigo  Especificacao                            Quant    P.Venda Total      
+  ~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~ ~~~~~~~ ~~~~~~~~~~ 
+  000402  MARCO ADUELA DE ANGELIN PEDRA 13             1,00  68,000     68,00
+  000424  PORTA LIZA 80x210                            1,00  52,000     52,00
+  000708  DOBRADICA ZINCADA 3"                         3,00   1,700      5,10
+  000758  PARAFUSO P/ DOBRADICA 3.8X22 FENDA          20,00   0,070      1,40
+  000366  FECHADURA EXT 2600/70 IP ALIAN€A             1,00  27,500     27,50
+  ----------------------------------------------------------------------------
+   Total de Compas..:    154,00 Desconto..:           Total a Pagar..:   154,00
+  ----------------------------------------------------------------------------
+
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Sistema de Administracao Estoque - Versao 1.0  18/05/2013                                                         07:47
+
+
+
+
+
+
+
+
+
+
+
+
+
+

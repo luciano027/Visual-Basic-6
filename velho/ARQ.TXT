@@ -1,0 +1,25 @@
+  BOTELHO MATERIAL DE CONSTRUCAO               
+  AV MURIAE, 376 - NOVA CARAPINA                   
+
+  Extrato Entrada de Mercadorias                                        Pag.  1
+
+  Fornecedor..: 001 FORNECEDOR DIVERSOS                          
+  Data........: 17/11/2014
+
+  Codigo    Especificacao                  Quantidade Preco      Valor     
+  ~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~
+  000421    PORTA ALMOFADA 80X210 LE            1,00      104,00     104.00
+  000526    RECEPTACULO BOCAL PORCEL           20,00        1,05      21.00
+  001165    ABRA€ADEIRA TIPO COPO 3/           10,00        0,84       8.40
+  001159    ABRA€ADEIRA TIPO COPO 1            15,00        1,04      15.60
+  000457    VERNIZ SINTETICO P/ MADE            7,00       11,50      80.50
+  001155    ABRA€ADEIRA P/TUBO 75              80,00        0,58      46.40
+  001039    ABRA€ADEIRA P/TUBO 40               5,00        0,35       1.75
+  001761    LAJOTA 09X19X38 10 FURO           300,00        0,74     222.00
+ -------------------------------------------------------------------------
+   Total na Pagina.........                                        499,65
+   Total a Pagar ..........                                        499,65
+ -------------------------------------------------------------------------
+
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+               Sistema de Administracao Estoque - Versao 1.0  17/11/2014                                                         13:20

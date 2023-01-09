@@ -1,0 +1,35 @@
+
+  BOTELHO MATERIAL DE CONSTRUCAO               
+  AV MURIAE, 376 - NOVA CARAPINA                   
+  Telefone:  3341-2005            FAX:  3341-2005                     Pag. 001
+  Extrato Cliente 
+  Data..: 27/09/2014
+  Vendedor : ELZENI                                       
+
+  Codigo  Especificacao                            Quant    P.Venda Total      
+  ~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~ ~~~~~~~ ~~~~~~~~~~ 
+  000827  CIMENTO HOLCIN 50KL AV                       7,00  20,500    143,50
+  ----------------------------------------------------------------------------
+   Total de Compas..:    143,50 Desconto..:           Total a Pagar..:   143,50
+  ----------------------------------------------------------------------------
+
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Sistema de Administracao Estoque - Versao 1.0  27/09/2014                                                         08:45
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

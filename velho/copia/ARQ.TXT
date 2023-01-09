@@ -1,0 +1,17 @@
+
+  BOTELHO MATERIAL DE CONSTRUCAO               
+  AV MURIAE, 376 - NOVA CARAPINA                   
+  Telefone:  3341-5981            FAX:  3341-5981                     Pag. 001
+  Extrato de Venda a Vista 
+  Data..: 14/04/2003
+
+  Codigo  Especificacao                            Quant    P.Venda Total      
+  ~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~ ~~~~~~~ ~~~~~~~~~~ 
+  001198  LAJOTA 19X19 PROM                          100,00   0,200     20,00
+  001088  CIMENTO MISU 50KL                            1,00  16,900     16,90
+  ----------------------------------------------------------------------------
+   Total de Compas..:     36,90 Desconto..:           Total a Pagar..:    36,90
+  ----------------------------------------------------------------------------
+
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Sistema de Administracao Estoque - Versao 1.0  14/04/2003                                                         17:17

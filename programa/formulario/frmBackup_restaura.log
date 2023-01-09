@@ -1,0 +1,4 @@
+Line 48: Class MSComctlLib.ProgressBar of control pb2 was not a loaded control class.
+Line 251: Class MSComDlg.CommonDialog of control cd was not a loaded control class.
+Line 260: Class MSComctlLib.ListView of control lstLog was not a loaded control class.
+Line 278: Class MSComctlLib.StatusBar of control status was not a loaded control class.

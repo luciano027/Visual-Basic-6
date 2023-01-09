@@ -1,0 +1,32 @@
+
+  BOTELHO MATERIAL DE CONSTRUCAO               
+  AV MURIAE, 376 - NOVA CARAPINA                   
+  Telefone:  3341-5981            FAX:  3341-5981                     Pag. 001
+  Extrato de Conta Cliente  -  a Prazo
+  Cliente...: 00052  CARMELITA MARIA SOARES                       
+  Endereco..: RUA AGUAS FORMOZA N.1093                     
+  Bairro....: NOVA CARAPINA   CEP.:           
+  Cidade....: SERRA                          UF..: SP
+  Telefone..: 3341-4270      Celular...:               
+  Data Debito :14/03/2003
+
+  Codigo  Especificacao                   Data       Quantidade   Valor       
+  ~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~~ ~~~~~~~~~~~  ~~~~~~~~~~~~
+  000210  SUPER BONDER 3 GRAMA            14/03/2003       1,00         2.70
+  000376  FORMAO 1"                       15/03/2003       1,00         5.80
+  000664  LIXA DE MADEIRA N.50            15/03/2003       2,00         0.60
+  001002  LIXA DE MADEIRA N.120           15/03/2003       2,00         0.60
+  000177  ROLO ESPUMA N.5 406/5           15/03/2003       1,00         1.30
+  000404  QUEROSENE 900ML                 15/03/2003       1,00         3.50
+  000590  TINTA ESMAL 900ML PRETO         15/03/2003       1,00         9.50
+  000928  BOCAL C/ CHAVE                  15/03/2003       1,00         1.80
+  001142  CACHIMBO P/ TV                  15/03/2003       1,00         2.20
+  000362  FIO TV 2 CAPAS PRETO METRO      15/03/2003      15,00         6.00
+  000623  REJUNTE CINZA 2KL               15/03/2003       2,00         4.00
+  ----------------------------------------------------------------------------
+    Total de Compas...................................                   38.00
+    Total de Credito.................................                     0.00
+    Total a Pagar....................................                    38.00
+
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Sistema de Administracao Estoque - Versao 1.0   22/03/2003                                                        10:41

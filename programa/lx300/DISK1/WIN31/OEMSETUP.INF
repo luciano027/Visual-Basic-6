@@ -1,0 +1,11 @@
+[disks]
+1=. ,"EPSON LX-300+ driver disk 1"
+2=. ,"Windows 3.11 Setup Disk"
+
+[io.device]
+; (EPSON new ESC/P printer model info file)
+
+ESCP1D.DRV,"EPSON LX-300+","DEVICESPECIFIC"
+
+[io.dependent]
+	 ESCP1D.DRV   = 2:UNIDRV.DLL, 2:DMCOLOR.DLL, 2:UNIDRV.HLP

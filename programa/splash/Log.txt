@@ -1,0 +1,205 @@
+
+=====================================
+* LOG GERADO EM 27/10/2014 09:16:23 *
+=====================================
+
+[27/10/2014 09:16:23] Iniciando atualização...
+[27/10/2014 09:16:30] Fechando aplicação C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina.exe
+[27/10/2014 09:16:32] Efetuando backup dos arquivos existentes...
+.....................Arquivo de backup: C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina271014_0916.exe
+[27/10/2014 09:16:34] Copiando os novos arquivos... 
+.....................Arquivo local: C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina.exe - ok!
+.....................Arquivo atualização: c:\_sistemas\vb6\medicina_trabalho\Update\medicina.exe - ok! 
+[27/10/2014 09:16:36] Finalizando atualização e iniciando o programa...
+[27/10/2014 09:16:36] Instalação finalizada com sucesso!
+
+
+=====================================
+* LOG GERADO EM 27/10/2014 09:26:40 *
+=====================================
+
+[27/10/2014 09:26:40] Iniciando atualização...
+[27/10/2014 09:26:42] Fechando aplicação C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina.exe
+[27/10/2014 09:26:44] Efetuando backup dos arquivos existentes...
+.....................Arquivo de backup: C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina271014_0926.exe
+[27/10/2014 09:26:46] Copiando os novos arquivos... 
+.....................Arquivo local: C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina.exe - ok!
+.....................Arquivo atualização: c:\_sistemas\vb6\medicina_trabalho\Update\medicina.exe - ok! 
+[27/10/2014 09:26:48] Finalizando atualização e iniciando o programa...
+[27/10/2014 09:26:48] Instalação finalizada com sucesso!
+
+
+=====================================
+* LOG GERADO EM 27/10/2014 09:27:39 *
+=====================================
+
+[27/10/2014 09:27:39] Iniciando atualização...
+[27/10/2014 09:27:41] Fechando aplicação C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina.exe
+[27/10/2014 09:27:43] Efetuando backup dos arquivos existentes...
+.....................Arquivo de backup: C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina271014_0927.exe
+[27/10/2014 09:27:45] Copiando os novos arquivos... 
+.....................Arquivo local: C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina.exe - ok!
+.....................Arquivo atualização: c:\_sistemas\vb6\medicina_trabalho\Update\medicina.exe - ok! 
+[27/10/2014 09:27:47] Finalizando atualização e iniciando o programa...
+[27/10/2014 09:27:47] Instalação finalizada com sucesso!
+
+
+=====================================
+* LOG GERADO EM 27/10/2014 09:29:30 *
+=====================================
+
+[27/10/2014 09:29:30] Iniciando atualização...
+[27/10/2014 09:29:32] Fechando aplicação C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina.exe
+[27/10/2014 09:29:34] Efetuando backup dos arquivos existentes...
+.....................Arquivo de backup: C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina271014_0929.exe
+[27/10/2014 09:29:36] Copiando os novos arquivos... 
+.....................Arquivo local: C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina.exe - ok!
+.....................Arquivo atualização: c:\_sistemas\vb6\medicina_trabalho\Update\medicina.exe - ok! 
+[27/10/2014 09:29:38] Finalizando atualização e iniciando o programa...
+[27/10/2014 09:29:38] Instalação finalizada com sucesso!
+
+
+=====================================
+* LOG GERADO EM 27/10/2014 10:10:43 *
+=====================================
+
+[27/10/2014 10:10:43] Iniciando atualização...
+[27/10/2014 10:10:45] Fechando aplicação C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina.exe
+[27/10/2014 10:10:47] Efetuando backup dos arquivos existentes...
+.....................Arquivo de backup: C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina271014_1010.exe
+[27/10/2014 10:10:49] Copiando os novos arquivos... 
+.....................Arquivo local: C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina.exe - ok!
+.....................Arquivo atualização: c:\_sistemas\vb6\medicina_trabalho\Update\medicina.exe - ok! 
+[27/10/2014 10:10:51] Finalizando atualização e iniciando o programa...
+[27/10/2014 10:10:51] Instalação finalizada com sucesso!
+
+
+=====================================
+* LOG GERADO EM 27/10/2014 10:11:35 *
+=====================================
+
+[27/10/2014 10:11:35] Iniciando atualização...
+[27/10/2014 10:11:37] Fechando aplicação C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina.exe
+[27/10/2014 10:11:39] Efetuando backup dos arquivos existentes...
+.....................Arquivo de backup: C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina271014_1011.exe
+[27/10/2014 10:11:41] Copiando os novos arquivos... 
+.....................Arquivo local: C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina.exe - ok!
+.....................Arquivo atualização: c:\_sistemas\vb6\medicina_trabalho\Update\medicina.exe - ok! 
+[27/10/2014 10:11:43] Finalizando atualização e iniciando o programa...
+[27/10/2014 10:11:43] Instalação finalizada com sucesso!
+
+
+=====================================
+* LOG GERADO EM 27/10/2014 10:41:12 *
+=====================================
+
+[27/10/2014 10:41:12] Iniciando atualização...
+[27/10/2014 10:41:14] Fechando aplicação C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina.exe
+[27/10/2014 10:41:16] Efetuando backup dos arquivos existentes...
+.....................Arquivo de backup: C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina271014_1041.exe
+[27/10/2014 10:41:18] Copiando os novos arquivos... 
+.....................Arquivo local: C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina.exe - ok!
+.....................Arquivo atualização: c:\_sistemas\vb6\medicina_trabalho\Update\medicina.exe - ok! 
+[27/10/2014 10:41:20] Finalizando atualização e iniciando o programa...
+[27/10/2014 10:41:20] Instalação finalizada com sucesso!
+
+
+=====================================
+* LOG GERADO EM 27/10/2014 10:42:25 *
+=====================================
+
+[27/10/2014 10:42:25] Iniciando atualização...
+[27/10/2014 10:42:27] Fechando aplicação C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina.exe
+[27/10/2014 10:42:29] Efetuando backup dos arquivos existentes...
+.....................Arquivo de backup: C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina271014_1042.exe
+[27/10/2014 10:42:31] Copiando os novos arquivos... 
+.....................Arquivo local: C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina.exe - ok!
+.....................Arquivo atualização: c:\_sistemas\vb6\medicina_trabalho\Update\medicina.exe - ok! 
+[27/10/2014 10:42:33] Finalizando atualização e iniciando o programa...
+[27/10/2014 10:42:33] Instalação finalizada com sucesso!
+
+
+=====================================
+* LOG GERADO EM 27/10/2014 10:45:10 *
+=====================================
+
+[27/10/2014 10:45:10] Iniciando atualização...
+[27/10/2014 10:45:12] Fechando aplicação C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina.exe
+[27/10/2014 10:45:14] Efetuando backup dos arquivos existentes...
+.....................Arquivo de backup: C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina271014_1045.exe
+[27/10/2014 10:45:16] Copiando os novos arquivos... 
+.....................Arquivo local: C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina.exe - ok!
+.....................Arquivo atualização: c:\_sistemas\vb6\medicina_trabalho\Update\medicina.exe - ok! 
+[27/10/2014 10:45:18] Finalizando atualização e iniciando o programa...
+[27/10/2014 10:45:18] Instalação finalizada com sucesso!
+
+
+=====================================
+* LOG GERADO EM 27/10/2014 10:49:39 *
+=====================================
+
+[27/10/2014 10:49:39] Iniciando atualização...
+[27/10/2014 10:49:41] Fechando aplicação C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina.exe
+[27/10/2014 10:49:43] Efetuando backup dos arquivos existentes...
+.....................Arquivo de backup: C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina271014_1049.exe
+[27/10/2014 10:49:45] Copiando os novos arquivos... 
+.....................Arquivo local: C:\_sistemas\vb6\medicina_trabalho\Programa\splash\medicina.exe - ok!
+.....................Arquivo atualização: c:\_sistemas\vb6\medicina_trabalho\Update\medicina.exe - ok! 
+[27/10/2014 10:49:47] Finalizando atualização e iniciando o programa...
+[27/10/2014 10:49:47] Instalação finalizada com sucesso!
+
+
+=====================================
+* LOG GERADO EM 27/10/2014 11:05:15 *
+=====================================
+
+[27/10/2014 11:05:15] Erro em definir as datas!
+[27/10/2014 11:05:15] 53 - File not found
+
+
+=====================================
+* LOG GERADO EM 27/10/2014 11:38:32 *
+=====================================
+
+[27/10/2014 11:38:32] Iniciando atualização...
+[27/10/2014 11:38:34] Fechando aplicação C:\_sistemas\vb6\fioretto\programa\splash\fioretto.exe
+[27/10/2014 11:38:37] Efetuando backup dos arquivos existentes...
+.....................Arquivo de backup: C:\_sistemas\vb6\fioretto\programa\splash\fioretto271014_1138.exe
+[27/10/2014 11:38:39] Copiando os novos arquivos... 
+.....................Arquivo local: C:\_sistemas\vb6\fioretto\programa\splash\fioretto.exe - ok!
+.....................Arquivo atualização: c:\_sistemas\vb6\fioretto\Update\fioretto.exe - ok! 
+[27/10/2014 11:38:42] Finalizando atualização e iniciando o programa...
+[27/10/2014 11:38:42] Instalação finalizada com sucesso!
+
+
+=====================================
+* LOG GERADO EM 15/4/2015 17:42:36 *
+=====================================
+
+[15/4/2015 17:42:36] Erro em definir as datas!
+[15/4/2015 17:42:36] 53 - File not found
+
+
+=====================================
+* LOG GERADO EM 15/4/2015 17:42:39 *
+=====================================
+
+[15/4/2015 17:42:39] Erro em definir as datas!
+[15/4/2015 17:42:39] 53 - File not found
+
+
+=====================================
+* LOG GERADO EM 15/4/2015 17:42:44 *
+=====================================
+
+[15/4/2015 17:42:44] Erro em definir as datas!
+[15/4/2015 17:42:44] 53 - File not found
+
+
+=====================================
+* LOG GERADO EM 15/4/2015 17:42:49 *
+=====================================
+
+[15/4/2015 17:42:49] Erro em definir as datas!
+[15/4/2015 17:42:49] 53 - File not found
+

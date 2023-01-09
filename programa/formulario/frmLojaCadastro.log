@@ -1,0 +1,40 @@
+Line 18: Class Fioreto.VistaButton of control VistaButton1 was not a loaded control class.
+Line 489: Class Fioreto.VistaButton of control cmdGravar was not a loaded control class.
+Line 517: Class Fioreto.VistaButton of control cmdExcluir was not a loaded control class.
+Line 545: Class Fioreto.VistaButton of control cmdSair was not a loaded control class.
+Line 24: The property name _ExtentX in VistaButton1 is invalid.
+Line 25: The property name _ExtentY in VistaButton1 is invalid.
+Line 26: The property name Caption in VistaButton1 is invalid.
+Line 38: The property name Pictures in VistaButton1 is invalid.
+Line 39: The property name UseMaskColor in VistaButton1 is invalid.
+Line 40: The property name MaskColor in VistaButton1 is invalid.
+Line 42: The property name NoBackground in VistaButton1 is invalid.
+Line 44: The property name PictureOffset in VistaButton1 is invalid.
+Line 18: Property Picture in VistaButton1 could not be set.
+Line 495: The property name _ExtentX in cmdGravar is invalid.
+Line 496: The property name _ExtentY in cmdGravar is invalid.
+Line 497: The property name Caption in cmdGravar is invalid.
+Line 509: The property name Pictures in cmdGravar is invalid.
+Line 510: The property name UseMaskColor in cmdGravar is invalid.
+Line 511: The property name MaskColor in cmdGravar is invalid.
+Line 513: The property name NoBackground in cmdGravar is invalid.
+Line 515: The property name PictureOffset in cmdGravar is invalid.
+Line 489: Property Picture in cmdGravar could not be set.
+Line 523: The property name _ExtentX in cmdExcluir is invalid.
+Line 524: The property name _ExtentY in cmdExcluir is invalid.
+Line 525: The property name Caption in cmdExcluir is invalid.
+Line 537: The property name Pictures in cmdExcluir is invalid.
+Line 538: The property name UseMaskColor in cmdExcluir is invalid.
+Line 539: The property name MaskColor in cmdExcluir is invalid.
+Line 541: The property name NoBackground in cmdExcluir is invalid.
+Line 543: The property name PictureOffset in cmdExcluir is invalid.
+Line 517: Property Picture in cmdExcluir could not be set.
+Line 551: The property name _ExtentX in cmdSair is invalid.
+Line 552: The property name _ExtentY in cmdSair is invalid.
+Line 553: The property name Caption in cmdSair is invalid.
+Line 565: The property name Pictures in cmdSair is invalid.
+Line 566: The property name UseMaskColor in cmdSair is invalid.
+Line 567: The property name MaskColor in cmdSair is invalid.
+Line 569: The property name NoBackground in cmdSair is invalid.
+Line 571: The property name PictureOffset in cmdSair is invalid.
+Line 545: Property Picture in cmdSair could not be set.

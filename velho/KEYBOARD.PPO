@@ -1,0 +1,25 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FUNCTION InKeyWait( nSecs )
+   LOCAL nKey
+   LOCAL bKeyBlock
+
+   nKey := INKEY( nSecs )
+
+   IF (bKeyBlock := SETKEY(nKey)) <> NIL 
+      EVAL(bKeyBlock, PROCNAME(2), PROCLINE(2))
+   ENDIF
+
+   RETURN( nKey )

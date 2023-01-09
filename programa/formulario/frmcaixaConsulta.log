@@ -1,0 +1,5 @@
+Line 490: Class MSComctlLib.ListView of control ListaSaida was not a loaded control class.
+Line 867: Class MSComctlLib.ListView of control ListaCaixa was not a loaded control class.
+Line 897: Class MSComctlLib.StatusBar of control status was not a loaded control class.
+Line 999: Class MSComCtl2.MonthView of control txtDataF was not a loaded control class.
+Line 1014: Class MSComCtl2.MonthView of control txtDataI was not a loaded control class.

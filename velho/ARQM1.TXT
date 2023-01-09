@@ -1,0 +1,35 @@
+
+  BOTELHO MATERIAL DE CONSTRUCAO               
+  AV MURIAE, 376 - NOVA CARAPINA                   
+  Telefone:  3341-2005            FAX:  3341-2005                     Pag. 001
+  Extrato Cliente 
+  Data..: 18/04/2015
+  Vendedor : ELZENI                                       
+
+  Codigo  Especificacao                            Quant    P.Venda Total      
+  ~~~~~~~ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~ ~~~~~~~ ~~~~~~~~~~ 
+  000244  ARGA MASSA AC II 20K EXTERNA                 1,00  21,500     21,50
+  001998  CIMENTO CAUE 50 KL AV                       17,00  20,500    348,50
+  000470  AREIA MEDIA LAVADA METRO                     1,00  55,000     55,00
+  ----------------------------------------------------------------------------
+   Total de Compas..:    425,00 Desconto..:           Total a Pagar..:   425,00
+  ----------------------------------------------------------------------------
+
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Sistema de Administracao Estoque - Versao 1.0  18/04/2015                                                         10:07
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
